@@ -27,8 +27,8 @@ public class GestoMenuBar extends JMenuBar
 		Printer.setTargetTextArea(container.getTexto());
 		
 		this.add(createConfigurationMenu());
-		this.add(createOperationsMenu());
-		this.add(createManagementMenu());
+		this.add(createGraphicsMenu());
+		this.add(createTextualMenu());
 		this.add(createHelpMenu());
 	}
 
@@ -390,16 +390,17 @@ public class GestoMenuBar extends JMenuBar
 	}
 
 	/**
-	 * Creates the Operations menu.
+	 * Creates the Graphics menu.
 	 * 
 	 * @return the menu
 	 */
-	public JMenu createOperationsMenu()
+	public JMenu createGraphicsMenu()
 	{
 		JMenu menu = new JMenu("Graphical outputs");
 		menu.add(createSelectedTrajectoryItem());
 		menu.add(createAllTrajectoriesItem());
 		menu.add(createHeatMapItem());
+		menu.add(createVoronoiItem());
 		return menu;
 	}
 
@@ -462,12 +463,33 @@ public class GestoMenuBar extends JMenuBar
 		return item;
 	}
 
+	
 	/**
-	 * Creates the Management menu.
+	 * Creates the "Show the Voronoi diagram" menu item and sets its action listener.
+	 * 
+	 * @return the menu item
+	 */
+	public JMenuItem createVoronoiItem()
+	{
+		JMenuItem item = new JMenuItem("Voronoi Diagram", new ImageIcon("images/voronoiIcon.png"));
+		
+		item.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent event)
+			{
+				View.drawVoronoi();
+			}
+		});
+		return item;
+	}
+
+	
+	/**
+	 * Creates the Textual menu.
 	 * 
 	 * @return the menu
 	 */
-	public JMenu createManagementMenu()
+	public JMenu createTextualMenu()
 	{
 		JMenu menu = new JMenu("Textual outputs");
 		menu.add(createTrajectoriesItem());

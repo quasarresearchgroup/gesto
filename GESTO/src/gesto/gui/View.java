@@ -10,16 +10,23 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 import javax.imageio.ImageIO;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 
+import gesto.Cluster;
 import gesto.ColorGradient;
+import gesto.KMeansBasic;
 import gesto.Model;
 import gesto.Point;
 import gesto.Trajectory;
+import voronoi2.GraphEdge;
+import voronoi2.Voronoi;
 
 public class View
 {
@@ -112,7 +119,7 @@ public class View
 		showGrid(g2d);
 
 		showTrajectory(g2d, (Trajectory) trajectoriesChoice.getSelectedItem());
-		
+
 		showStoppingPoints(g2d, (Trajectory) trajectoriesChoice.getSelectedItem());
 
 		showInterestingRoutes();
@@ -127,7 +134,7 @@ public class View
 				showGrid(g2d);
 
 				showTrajectory(g2d, (Trajectory) trajectoriesChoice.getSelectedItem());
-				
+
 				showStoppingPoints(g2d, (Trajectory) trajectoriesChoice.getSelectedItem());
 
 				showInterestingRoutes();
@@ -160,7 +167,8 @@ public class View
 		showInterestingRoutes();
 	}
 
-	/**
+	/************************************************************
+	 *
 	 ***********************************************************/
 	public static void showHeatMap()
 	{
@@ -194,6 +202,63 @@ public class View
 		}
 		showInterestingRoutes();
 	}
+	
+	/************************************************************
+	 *
+	 ***********************************************************/
+	public static void drawVoronoi()
+	{
+		Point.setCanvas(monasteryImage.getWidth(), monasteryImage.getHeight());
+
+		resetMonasteryImage();
+
+		g2d.setBackground(Color.WHITE);
+
+		showGrid(g2d);
+		
+		double minX = Double.MAX_VALUE, maxX = Double.MIN_VALUE, minY = Double.MAX_VALUE, maxY = Double.MIN_VALUE;
+
+		List<Point> pointsList = new ArrayList<Point>();
+
+		for (Trajectory t : Model.getAllTrajectories())
+		{
+			showStoppingPoints(g2d, t);
+			for (Point p : t.getPoints())
+				if (p.getTimeStopped() > 0)
+				{
+					pointsList.add(p);
+					if (p.getX() < minX)
+						minX = p.getX();
+					if (p.getX() > maxX)
+						maxX = p.getX();
+					if (p.getY() < minY)
+						minY = p.getY();
+					if (p.getY() > maxY)
+						maxY = p.getY();
+				}
+		}
+
+		KMeansBasic.setPoints(pointsList);
+
+		List<Point> centroids = KMeansBasic.clusterCentroids(minX, maxX, minY, maxY);
+
+		for (Point c: centroids)
+			drawCircle(g2d, Color.BLACK, c.getCanvasX(), c.getCanvasY(), Configuration.isThinStrokeSelected() ? 3 : 5, true);
+		
+		List<GraphEdge> voronoiEdges = KMeansBasic.voronoiEdges(centroids, minX, maxX, minY, maxY);
+
+		Point begin, end;
+		for (GraphEdge edge : voronoiEdges)
+		{
+//			System.out.println(edge);
+			begin = new Point(edge.x1, edge.y1);
+			end = new Point(edge.x2, edge.y2);
+			g2d.setColor(Color.BLACK);
+			g2d.drawLine(begin.getCanvasX(), begin.getCanvasY(), end.getCanvasX(), end.getCanvasY());
+		}
+		
+		showInterestingRoutes();
+	}
 
 	/************************************************************
 	 *
@@ -216,7 +281,7 @@ public class View
 		if (Configuration.isGridSelected())
 		{
 			g.setBackground(Color.WHITE);
-			g.setColor(Color.GREEN);
+			g.setColor(Color.LIGHT_GRAY);
 			g.setStroke(new BasicStroke(1));
 
 			int width = monasteryImage.getWidth();
@@ -355,7 +420,7 @@ public class View
 					else
 						sc = stopColor.relativeColor(p.getTimeStopped() / (2 * Model.AVERAGE_STOP));
 
-					fillCircle(g, sc, p.getCanvasX(), p.getCanvasY(), Configuration.isThinStrokeSelected() ? 2 : 4);
+					drawCircle(g, sc, p.getCanvasX(), p.getCanvasY(), Configuration.isThinStrokeSelected() ? 2 : 4, true);
 				}
 			// System.out.println("LONGEST>" + Model.LONGEST_STOP);
 		}
@@ -367,13 +432,17 @@ public class View
 	 * @param centerY
 	 * @param radius
 	 */
-	private static void fillCircle(Graphics2D g, Color color, int centerX, int centerY, int radius)
+	private static void drawCircle(Graphics2D g, Color color, int centerX, int centerY, int radius, boolean filled)
 	{
 		Color currentColor = g.getColor();
 
 		g.setColor(color);
-		g.fillOval(centerX - radius, centerY - radius, 2 * radius, 2 * radius);
-
+		
+		if (filled)
+			g.fillOval(centerX - radius, centerY - radius, 2 * radius, 2 * radius);
+		else
+			g.drawOval(centerX - radius, centerY - radius, 2 * radius, 2 * radius);
+		
 		g.setColor(currentColor);
 	}
 
@@ -413,4 +482,5 @@ public class View
 		g.drawLine(x1, y1, x2, y2);
 		g.fillPolygon(xpoints, ypoints, 3);
 	}
+
 }
