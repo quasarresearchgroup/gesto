@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="GESTO" nsURI="http:///GESTO.ecore" nsPrefix="GESTO">
+  <eSubpackages name="gesto" nsURI="http:///GESTO/gesto.ecore" nsPrefix="GESTO.gesto">
+    <eSubpackages name="gesto" nsURI="http:///GESTO/gesto/gesto.ecore" nsPrefix="GESTO.gesto.gesto">
+      <eClassifiers xsi:type="ecore:EClass" name="Model" abstract="true">
+        <eOperations name="getAllTrajectories" ordered="false" upperBound="-1" eType="#//gesto/gesto/Trajectory"/>
+        <eOperations name="getAdjacencyMatrix" ordered="false" upperBound="-1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eOperations name="readTrajectories" ordered="false" lowerBound="1"/>
+        <eOperations name="fillMatrix" ordered="false" lowerBound="1"/>
+        <eOperations name="mostCommon" ordered="false" lowerBound="1" eType="#//gesto/gesto/Trajectory"/>
+        <eOperations name="mostDissimilar" ordered="false" lowerBound="1" eType="#//gesto/gesto/Trajectory"/>
+        <eOperations name="longestStop" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eOperations name="averageStop" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eOperations name="highestSpeed" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eOperations name="lowestSpeed" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eOperations name="shorter" ordered="false" lowerBound="1" eType="#//gesto/gesto/Trajectory"/>
+        <eOperations name="longer" ordered="false" lowerBound="1" eType="#//gesto/gesto/Trajectory"/>
+        <eOperations name="slower" ordered="false" lowerBound="1" eType="#//gesto/gesto/Trajectory"/>
+        <eOperations name="faster" ordered="false" lowerBound="1" eType="#//gesto/gesto/Trajectory"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="TRAJECTORIES_POINTS_FILE"
+            ordered="false" unique="false" lowerBound="1" eType="#//java/java/lang/String"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="allTrajectories" ordered="false"
+            unique="false" upperBound="-1" eType="#//gesto/gesto/Trajectory"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="adjacencyMatrix" ordered="false"
+            unique="false" upperBound="-1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="HIGHEST_SPEED" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"
+            defaultValueLiteral="0"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="LOWEST_SPEED" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"
+            defaultValueLiteral="Double.POSITIVE_INFINITY"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="LONGEST_STOP" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"
+            defaultValueLiteral="0"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="AVERAGE_STOP" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"
+            defaultValueLiteral="0"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Trajectory">
+        <eOperations name="Trajectory" ordered="false" lowerBound="1">
+          <eParameters name="type" ordered="false" lowerBound="1" eType="#//gesto/gesto/SubjectType"/>
+          <eParameters name="subject" ordered="false" lowerBound="1" eType="#//java/java/lang/String"/>
+          <eParameters name="points" ordered="false" upperBound="-1" eType="#//gesto/gesto/Point"/>
+        </eOperations>
+        <eOperations name="getType" ordered="false" lowerBound="1" eType="#//gesto/gesto/SubjectType"/>
+        <eOperations name="getSubject" ordered="false" lowerBound="1" eType="#//java/java/lang/String"/>
+        <eOperations name="getPoints" ordered="false" upperBound="-1" eType="#//gesto/gesto/Point"/>
+        <eOperations name="timeWalking" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eOperations name="timeStopped" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eOperations name="totalDuration" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eOperations name="distanceWalked" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eOperations name="averageSpeed" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eOperations name="distanceTo" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double">
+          <eParameters name="another" ordered="false" lowerBound="1" eType="#//gesto/gesto/Trajectory"/>
+        </eOperations>
+        <eOperations name="toString" ordered="false" lowerBound="1" eType="#//java/java/lang/String"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false"
+            unique="false" lowerBound="1" eType="#//gesto/gesto/SubjectType"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="subject" ordered="false"
+            unique="false" lowerBound="1" eType="#//java/java/lang/String"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="points" ordered="false"
+            unique="false" upperBound="-1" eType="#//gesto/gesto/Point"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EEnum" name="SubjectType">
+        <eLiterals name="FRESHMAN"/>
+        <eLiterals name="FINALIST" value="1"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Point">
+        <eOperations name="setCanvas" ordered="false" lowerBound="1">
+          <eParameters name="width" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+          <eParameters name="height" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        </eOperations>
+        <eOperations name="Point" ordered="false" lowerBound="1">
+          <eParameters name="order" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+          <eParameters name="x" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+          <eParameters name="y" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+          <eParameters name="distanceFromPrevious" ordered="false" lowerBound="1"
+              eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+          <eParameters name="timeStopped" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+          <eParameters name="timeFromPrevious" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        </eOperations>
+        <eOperations name="Point" ordered="false" lowerBound="1">
+          <eParameters name="x" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+          <eParameters name="y" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        </eOperations>
+        <eOperations name="getAction" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eOperations name="getX" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eOperations name="getY" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eOperations name="setX" ordered="false" lowerBound="1">
+          <eParameters name="x" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        </eOperations>
+        <eOperations name="setY" ordered="false" lowerBound="1">
+          <eParameters name="y" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        </eOperations>
+        <eOperations name="setCluster" ordered="false" lowerBound="1">
+          <eParameters name="n" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        </eOperations>
+        <eOperations name="getCluster" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eOperations name="getCanvasX" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eOperations name="getCanvasY" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eOperations name="distanceTo" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double">
+          <eParameters name="other" ordered="false" lowerBound="1" eType="#//gesto/gesto/Point"/>
+        </eOperations>
+        <eOperations name="getDistanceFromPrevious" ordered="false" lowerBound="1"
+            eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eOperations name="getTimeStopped" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eOperations name="getTimeFromPrevious" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eOperations name="getSpeedFromPrevious" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eOperations name="createRandomPoint" ordered="false" lowerBound="1" eType="#//gesto/gesto/Point">
+          <eParameters name="minX" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+          <eParameters name="maxX" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+          <eParameters name="minY" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+          <eParameters name="maxY" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        </eOperations>
+        <eOperations name="createRandomPoint" ordered="false" lowerBound="1" eType="#//gesto/gesto/Point">
+          <eParameters name="min" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+          <eParameters name="max" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        </eOperations>
+        <eOperations name="createRandomPoints" ordered="false" upperBound="-1" eType="#//gesto/gesto/Point">
+          <eParameters name="min" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+          <eParameters name="max" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+          <eParameters name="number" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        </eOperations>
+        <eOperations name="toString" ordered="false" lowerBound="1" eType="#//java/java/lang/String"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="canvasWidth" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="canvasHeight" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="order" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="distanceFromPrevious"
+            ordered="false" unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeStopped" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeFromPrevious" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="cluster_number" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"
+            defaultValueLiteral="0"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Point_setCanvas"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Point_Point"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Point_Point"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Point_getAction"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Point_getX"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Point_getY"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Point_setX"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Point_setY"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Point_setCluster"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Point_getCluster"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Point_getCanvasX"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Point_getCanvasY"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Point_distanceTo"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Point_getDistanceFromPrevious"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Point_getTimeStopped"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Point_getTimeFromPrevious"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Point_getSpeedFromPrevious"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Point_createRandomPoint"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Point_createRandomPoint"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Point_createRandomPoints"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Point_toString"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Trajectory_Trajectory"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Trajectory_getType"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Trajectory_getSubject"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Trajectory_getPoints"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Trajectory_timeWalking"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Trajectory_timeStopped"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Trajectory_totalDuration"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Trajectory_distanceWalked"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Trajectory_averageSpeed"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Trajectory_distanceTo"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Trajectory_toString"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Model_getAllTrajectories"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Model_getAdjacencyMatrix"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Model_readTrajectories"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Model_fillMatrix"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Model_mostCommon"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Model_mostDissimilar"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Model_longestStop"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Model_averageStop"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Model_highestSpeed"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Model_lowestSpeed"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Model_shorter"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Model_longer"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Model_slower"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Model_faster"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Main">
+        <eOperations name="main" ordered="false" lowerBound="1">
+          <eParameters name="args" ordered="false" upperBound="-1" eType="#//java/java/lang/String"/>
+        </eOperations>
+        <eOperations name="initializeLookAndFeel" ordered="false" lowerBound="1"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Main_main"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Main_initializeLookAndFeel"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Cluster">
+        <eOperations name="Cluster" ordered="false" lowerBound="1">
+          <eParameters name="id" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        </eOperations>
+        <eOperations name="getPoints" ordered="false" upperBound="-1" eType="#//gesto/gesto/Point"/>
+        <eOperations name="addPoint" ordered="false" lowerBound="1">
+          <eParameters name="point" ordered="false" lowerBound="1" eType="#//gesto/gesto/Point"/>
+        </eOperations>
+        <eOperations name="setPoints" ordered="false" lowerBound="1">
+          <eParameters name="points" ordered="false" upperBound="-1" eType="#//gesto/gesto/Point"/>
+        </eOperations>
+        <eOperations name="getCentroid" ordered="false" lowerBound="1" eType="#//gesto/gesto/Point"/>
+        <eOperations name="setCentroid" ordered="false" lowerBound="1">
+          <eParameters name="centroid" ordered="false" lowerBound="1" eType="#//gesto/gesto/Point"/>
+        </eOperations>
+        <eOperations name="getId" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eOperations name="clear" ordered="false" lowerBound="1"/>
+        <eOperations name="plotCluster" ordered="false" lowerBound="1"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="points" ordered="false"
+            unique="false" upperBound="-1" eType="#//gesto/gesto/Point"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="centroid" ordered="false"
+            unique="false" lowerBound="1" eType="#//gesto/gesto/Point"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Cluster_Cluster"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Cluster_getPoints"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Cluster_addPoint"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Cluster_setPoints"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Cluster_getCentroid"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Cluster_setCentroid"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Cluster_getId"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Cluster_clear"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Cluster_plotCluster"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ColorGradient">
+        <eOperations name="ColorGradient" ordered="false" lowerBound="1"/>
+        <eOperations name="ColorGradient" ordered="false" lowerBound="1">
+          <eParameters name="initialValue" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        </eOperations>
+        <eOperations name="ColorGradient" ordered="false" lowerBound="1">
+          <eParameters name="actual" ordered="false" lowerBound="1" eType="#//java/java/awt/Color"/>
+        </eOperations>
+        <eOperations name="currentColor" ordered="false" lowerBound="1" eType="#//java/java/awt/Color"/>
+        <eOperations name="contains" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean">
+          <eParameters name="given" ordered="false" lowerBound="1" eType="#//java/java/awt/Color"/>
+        </eOperations>
+        <eOperations name="quartile" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int">
+          <eParameters name="given" ordered="false" lowerBound="1" eType="#//java/java/awt/Color"/>
+        </eOperations>
+        <eOperations name="warmUp" ordered="false" lowerBound="1">
+          <eParameters name="value" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        </eOperations>
+        <eOperations name="coolDown" ordered="false" lowerBound="1">
+          <eParameters name="value" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        </eOperations>
+        <eOperations name="relativeColor" ordered="false" lowerBound="1" eType="#//java/java/awt/Color">
+          <eParameters name="percentage" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        </eOperations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="gradient" ordered="false"
+            unique="false" upperBound="-1" eType="#//java/java/awt/Color"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="current" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="COOLEST" ordered="false"
+            unique="false" lowerBound="1" eType="#//java/java/awt/Color"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="WARMEST" ordered="false"
+            unique="false" lowerBound="1" eType="#//java/java/awt/Color"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ColorGradient_ColorGradient"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ColorGradient_ColorGradient"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ColorGradient_ColorGradient"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ColorGradient_currentColor"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ColorGradient_contains"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ColorGradient_quartile"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ColorGradient_warmUp"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ColorGradient_coolDown"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ColorGradient_relativeColor"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Character"/>
+      <eClassifiers xsi:type="ecore:EClass" name="KMeansBasic" abstract="true">
+        <eOperations name="setPoints" ordered="false" lowerBound="1">
+          <eParameters name="list" ordered="false" upperBound="-1" eType="#//gesto/gesto/Point"/>
+        </eOperations>
+        <eOperations name="clusterCentroids" ordered="false" upperBound="-1" eType="#//gesto/gesto/Point">
+          <eParameters name="minX" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+          <eParameters name="maxX" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+          <eParameters name="minY" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+          <eParameters name="maxY" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        </eOperations>
+        <eOperations name="voronoiEdges" ordered="false" upperBound="-1" eType="#//gesto/voronoi2/GraphEdge">
+          <eParameters name="centroids" ordered="false" upperBound="-1" eType="#//gesto/gesto/Point"/>
+          <eParameters name="minX" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+          <eParameters name="maxX" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+          <eParameters name="minY" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+          <eParameters name="maxY" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        </eOperations>
+        <eOperations name="plotClusters" ordered="false" lowerBound="1"/>
+        <eOperations name="calculate" ordered="false" upperBound="-1" eType="#//gesto/gesto/Point"/>
+        <eOperations name="clearClusters" ordered="false" lowerBound="1"/>
+        <eOperations name="getCentroids" ordered="false" upperBound="-1" eType="#//gesto/gesto/Point"/>
+        <eOperations name="assignCluster" ordered="false" lowerBound="1"/>
+        <eOperations name="calculateCentroids" ordered="false" lowerBound="1"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="NUM_CLUSTERS" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"
+            defaultValueLiteral="6"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="points" ordered="false"
+            unique="false" upperBound="-1" eType="#//gesto/gesto/Point"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="clusters" ordered="false"
+            unique="false" upperBound="-1" eType="#//gesto/gesto/Cluster"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="KMeansBasic_setPoints"/>
+      <eClassifiers xsi:type="ecore:EClass" name="KMeansBasic_clusterCentroids"/>
+      <eClassifiers xsi:type="ecore:EClass" name="KMeansBasic_voronoiEdges"/>
+      <eClassifiers xsi:type="ecore:EClass" name="KMeansBasic_plotClusters"/>
+      <eClassifiers xsi:type="ecore:EClass" name="KMeansBasic_calculate"/>
+      <eClassifiers xsi:type="ecore:EClass" name="KMeansBasic_clearClusters"/>
+      <eClassifiers xsi:type="ecore:EClass" name="KMeansBasic_getCentroids"/>
+      <eClassifiers xsi:type="ecore:EClass" name="KMeansBasic_assignCluster"/>
+      <eClassifiers xsi:type="ecore:EClass" name="KMeansBasic_calculateCentroids"/>
+      <eSubpackages name="gui" nsURI="http:///GESTO/gesto/gesto/gui.ecore" nsPrefix="GESTO.gesto.gesto.gui">
+        <eClassifiers xsi:type="ecore:EClass" name="GestoGUI" eSuperTypes="#//importedTypes/javax/swing/JFrame">
+          <eOperations name="getTexto" ordered="false" lowerBound="1" eType="#//importedTypes/javax/swing/JTextArea"/>
+          <eOperations name="setTexto" ordered="false" lowerBound="1">
+            <eParameters name="texto" ordered="false" lowerBound="1" eType="#//importedTypes/javax/swing/JTextArea"/>
+          </eOperations>
+          <eOperations name="GestoGUI" ordered="false" lowerBound="1"/>
+          <eOperations name="createTextArea" ordered="false" lowerBound="1" eType="#//importedTypes/javax/swing/JTextArea">
+            <eParameters name="imageIcon" ordered="false" lowerBound="1" eType="#//importedTypes/javax/swing/ImageIcon"/>
+          </eOperations>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="FRAME_WIDTH" ordered="false"
+              unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"
+              defaultValueLiteral="800"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="FRAME_HEIGHT" ordered="false"
+              unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"
+              defaultValueLiteral="600"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="texto" ordered="false"
+              unique="false" lowerBound="1" eType="#//importedTypes/javax/swing/JTextArea"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoGUI_getTexto"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoGUI_setTexto"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoGUI_GestoGUI"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoGUI_createTextArea"/>
+        <eClassifiers xsi:type="ecore:EClass" name="ImageFrame" eSuperTypes="#//importedTypes/javax/swing/JFrame">
+          <eOperations name="ImageFrame" ordered="false" lowerBound="1">
+            <eParameters name="title" ordered="false" lowerBound="1" eType="#//java/java/lang/String"/>
+            <eParameters name="image" ordered="false" lowerBound="1" eType="#//java/java/awt/image/BufferedImage"/>
+          </eOperations>
+          <eOperations name="updateImage" ordered="false" lowerBound="1">
+            <eParameters name="image" ordered="false" lowerBound="1" eType="#//java/java/awt/image/BufferedImage"/>
+          </eOperations>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="serialVersionUID"
+              ordered="false" unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//long"
+              defaultValueLiteral="1L"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="imageLabel" ordered="false"
+              unique="false" lowerBound="1" eType="#//importedTypes/javax/swing/JLabel"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="ImageFrame_ImageFrame"/>
+        <eClassifiers xsi:type="ecore:EClass" name="ImageFrame_updateImage"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Configuration" abstract="true">
+          <eOperations name="isTypeSelected" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean">
+            <eParameters name="type" ordered="false" lowerBound="1" eType="#//gesto/gesto/SubjectType"/>
+          </eOperations>
+          <eOperations name="toggleSelected" ordered="false" lowerBound="1">
+            <eParameters name="type" ordered="false" lowerBound="1" eType="#//gesto/gesto/SubjectType"/>
+          </eOperations>
+          <eOperations name="isTrajectoriesSelected" ordered="false" lowerBound="1"
+              eType="ecore:EDataType JavaLibrary.ecore#//boolean"/>
+          <eOperations name="toggleTrajectories" ordered="false" lowerBound="1"/>
+          <eOperations name="isStoppingPointsSelected" ordered="false" lowerBound="1"
+              eType="ecore:EDataType JavaLibrary.ecore#//boolean"/>
+          <eOperations name="toggleStoppingPoints" ordered="false" lowerBound="1"/>
+          <eOperations name="isThinStrokeSelected" ordered="false" lowerBound="1"
+              eType="ecore:EDataType JavaLibrary.ecore#//boolean"/>
+          <eOperations name="toggleThinStroke" ordered="false" lowerBound="1"/>
+          <eOperations name="isRandomColorsSelected" ordered="false" lowerBound="1"
+              eType="ecore:EDataType JavaLibrary.ecore#//boolean"/>
+          <eOperations name="toggleRandomColors" ordered="false" lowerBound="1"/>
+          <eOperations name="isArrowsSelected" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean"/>
+          <eOperations name="toggleArrows" ordered="false" lowerBound="1"/>
+          <eOperations name="isGridSelected" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean"/>
+          <eOperations name="toggleGrid" ordered="false" lowerBound="1"/>
+          <eOperations name="isSpeedSelected" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean"/>
+          <eOperations name="toggleSpeed" ordered="false" lowerBound="1"/>
+          <eOperations name="isDemoSelected" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean"/>
+          <eOperations name="toggleDemo" ordered="false" lowerBound="1"/>
+          <eOperations name="isDelaySelected" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean"/>
+          <eOperations name="toggleDelay" ordered="false" lowerBound="1"/>
+          <eOperations name="isMeanTrajectorySelected" ordered="false" lowerBound="1"
+              eType="ecore:EDataType JavaLibrary.ecore#//boolean"/>
+          <eOperations name="toggleMeanTrajectory" ordered="false" lowerBound="1"/>
+          <eOperations name="isDissimilarTrajectorySelected" ordered="false" lowerBound="1"
+              eType="ecore:EDataType JavaLibrary.ecore#//boolean"/>
+          <eOperations name="toggleDissimilarTrajectory" ordered="false" lowerBound="1"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="trajectoriesOn" ordered="false"
+              unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean"
+              defaultValueLiteral="true"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="stoppingPointsOn"
+              ordered="false" unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean"
+              defaultValueLiteral="true"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="thinStrokeOn" ordered="false"
+              unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean"
+              defaultValueLiteral="false"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="randomColorsOn" ordered="false"
+              unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean"
+              defaultValueLiteral="false"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="arrowsOn" ordered="false"
+              unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean"
+              defaultValueLiteral="true"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="gridOn" ordered="false"
+              unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean"
+              defaultValueLiteral="false"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="speedOn" ordered="false"
+              unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean"
+              defaultValueLiteral="false"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="demoOn" ordered="false"
+              unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean"
+              defaultValueLiteral="false"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="delayOn" ordered="false"
+              unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean"
+              defaultValueLiteral="false"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="meanTrajectoryOn"
+              ordered="false" unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean"
+              defaultValueLiteral="false"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="dissimilarTrajectoryOn"
+              ordered="false" unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean"
+              defaultValueLiteral="false"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="selectedTypes" ordered="false"
+              unique="false" lowerBound="1" eType="#//java/java/util/Set"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="Configuration_isTypeSelected"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Configuration_toggleSelected"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Configuration_isTrajectoriesSelected"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Configuration_toggleTrajectories"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Configuration_isStoppingPointsSelected"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Configuration_toggleStoppingPoints"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Configuration_isThinStrokeSelected"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Configuration_toggleThinStroke"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Configuration_isRandomColorsSelected"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Configuration_toggleRandomColors"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Configuration_isArrowsSelected"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Configuration_toggleArrows"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Configuration_isGridSelected"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Configuration_toggleGrid"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Configuration_isSpeedSelected"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Configuration_toggleSpeed"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Configuration_isDemoSelected"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Configuration_toggleDemo"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Configuration_isDelaySelected"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Configuration_toggleDelay"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Configuration_isMeanTrajectorySelected"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Configuration_toggleMeanTrajectory"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Configuration_isDissimilarTrajectorySelected"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Configuration_toggleDissimilarTrajectory"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Printer" abstract="true">
+          <eOperations name="setTargetTextArea" ordered="false" lowerBound="1">
+            <eParameters name="target" ordered="false" lowerBound="1" eType="#//importedTypes/javax/swing/JTextArea"/>
+          </eOperations>
+          <eOperations name="clean" ordered="false" lowerBound="1"/>
+          <eOperations name="separator" ordered="false" lowerBound="1"/>
+          <eOperations name="printTrajectories" ordered="false" lowerBound="1"/>
+          <eOperations name="printMatrix" ordered="false" lowerBound="1"/>
+          <eOperations name="printAverageDistancesVector" ordered="false" lowerBound="1"/>
+          <eOperations name="printStatistics" ordered="false" lowerBound="1"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="target" ordered="false"
+              unique="false" lowerBound="1" eType="#//importedTypes/javax/swing/JTextArea"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="Printer_setTargetTextArea"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Printer_clean"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Printer_separator"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Printer_printTrajectories"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Printer_printMatrix"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Printer_printAverageDistancesVector"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Printer_printStatistics"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar" eSuperTypes="#//importedTypes/javax/swing/JMenuBar">
+          <eOperations name="GestoMenuBar" ordered="false" lowerBound="1">
+            <eParameters name="container" ordered="false" lowerBound="1" eType="#//gesto/gesto/gui/GestoGUI"/>
+          </eOperations>
+          <eOperations name="createConfigurationMenu" ordered="false" lowerBound="1"
+              eType="#//importedTypes/javax/swing/JMenu"/>
+          <eOperations name="createSubjectsMenu" ordered="false" lowerBound="1" eType="#//importedTypes/javax/swing/JMenu"/>
+          <eOperations name="createFreshmenItem" ordered="false" lowerBound="1" eType="#//importedTypes/javax/swing/JCheckBoxMenuItem"/>
+          <eOperations name="createFinalistsItem" ordered="false" lowerBound="1" eType="#//importedTypes/javax/swing/JCheckBoxMenuItem"/>
+          <eOperations name="createTrajectoriesMenu" ordered="false" lowerBound="1"
+              eType="#//importedTypes/javax/swing/JMenu"/>
+          <eOperations name="createRandomColorsItem" ordered="false" lowerBound="1"
+              eType="#//importedTypes/javax/swing/JCheckBoxMenuItem"/>
+          <eOperations name="createThinStrokeItem" ordered="false" lowerBound="1"
+              eType="#//importedTypes/javax/swing/JCheckBoxMenuItem"/>
+          <eOperations name="createArrowsItem" ordered="false" lowerBound="1" eType="#//importedTypes/javax/swing/JCheckBoxMenuItem"/>
+          <eOperations name="createShowMenu" ordered="false" lowerBound="1" eType="#//importedTypes/javax/swing/JMenu"/>
+          <eOperations name="createSelectTrajectoriesItem" ordered="false" lowerBound="1"
+              eType="#//importedTypes/javax/swing/JCheckBoxMenuItem"/>
+          <eOperations name="createStoppingPointsItem" ordered="false" lowerBound="1"
+              eType="#//importedTypes/javax/swing/JCheckBoxMenuItem"/>
+          <eOperations name="createGridItem" ordered="false" lowerBound="1" eType="#//importedTypes/javax/swing/JCheckBoxMenuItem"/>
+          <eOperations name="createMeanTrajectoryItem" ordered="false" lowerBound="1"
+              eType="#//importedTypes/javax/swing/JCheckBoxMenuItem"/>
+          <eOperations name="createDissimilarTrajectoryItem" ordered="false" lowerBound="1"
+              eType="#//importedTypes/javax/swing/JCheckBoxMenuItem"/>
+          <eOperations name="createOptionsMenu" ordered="false" lowerBound="1" eType="#//importedTypes/javax/swing/JMenu"/>
+          <eOperations name="createSpeedItem" ordered="false" lowerBound="1" eType="#//importedTypes/javax/swing/JCheckBoxMenuItem"/>
+          <eOperations name="createDemoItem" ordered="false" lowerBound="1" eType="#//importedTypes/javax/swing/JCheckBoxMenuItem"/>
+          <eOperations name="createDelayItem" ordered="false" lowerBound="1" eType="#//importedTypes/javax/swing/JCheckBoxMenuItem"/>
+          <eOperations name="createProgramExitItem" ordered="false" lowerBound="1"
+              eType="#//importedTypes/javax/swing/JMenuItem"/>
+          <eOperations name="createGraphicsMenu" ordered="false" lowerBound="1" eType="#//importedTypes/javax/swing/JMenu"/>
+          <eOperations name="createSelectedTrajectoryItem" ordered="false" lowerBound="1"
+              eType="#//importedTypes/javax/swing/JMenuItem"/>
+          <eOperations name="createAllTrajectoriesItem" ordered="false" lowerBound="1"
+              eType="#//importedTypes/javax/swing/JMenuItem"/>
+          <eOperations name="createHeatMapItem" ordered="false" lowerBound="1" eType="#//importedTypes/javax/swing/JMenuItem"/>
+          <eOperations name="createVoronoiItem" ordered="false" lowerBound="1" eType="#//importedTypes/javax/swing/JMenuItem"/>
+          <eOperations name="createTextualMenu" ordered="false" lowerBound="1" eType="#//importedTypes/javax/swing/JMenu"/>
+          <eOperations name="createTrajectoryMatrixItem" ordered="false" lowerBound="1"
+              eType="#//importedTypes/javax/swing/JMenuItem"/>
+          <eOperations name="createTrajectoriesItem" ordered="false" lowerBound="1"
+              eType="#//importedTypes/javax/swing/JMenuItem"/>
+          <eOperations name="createAverageDistancesVectorItem" ordered="false" lowerBound="1"
+              eType="#//importedTypes/javax/swing/JMenuItem"/>
+          <eOperations name="createStatisticsItem" ordered="false" lowerBound="1"
+              eType="#//importedTypes/javax/swing/JMenuItem"/>
+          <eOperations name="createCleanItem" ordered="false" lowerBound="1" eType="#//importedTypes/javax/swing/JMenuItem"/>
+          <eOperations name="createHelpMenu" ordered="false" lowerBound="1" eType="#//importedTypes/javax/swing/JMenu"/>
+          <eOperations name="createAboutItem" ordered="false" lowerBound="1" eType="#//importedTypes/javax/swing/JMenuItem"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="serialVersionUID"
+              ordered="false" unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//long"
+              defaultValueLiteral="1L"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_GestoMenuBar"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createConfigurationMenu"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createSubjectsMenu"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createFreshmenItem"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createFinalistsItem"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createTrajectoriesMenu"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createRandomColorsItem"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createThinStrokeItem"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createArrowsItem"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createShowMenu"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createSelectTrajectoriesItem"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createStoppingPointsItem"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createGridItem"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createMeanTrajectoryItem"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createDissimilarTrajectoryItem"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createOptionsMenu"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createSpeedItem"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createDemoItem"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createDelayItem"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createProgramExitItem"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createGraphicsMenu"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createSelectedTrajectoryItem"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createAllTrajectoriesItem"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createHeatMapItem"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createVoronoiItem"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createTextualMenu"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createTrajectoryMatrixItem"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createTrajectoriesItem"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createAverageDistancesVectorItem"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createStatisticsItem"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createCleanItem"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createHelpMenu"/>
+        <eClassifiers xsi:type="ecore:EClass" name="GestoMenuBar_createAboutItem"/>
+        <eClassifiers xsi:type="ecore:EClass" name="View">
+          <eOperations name="getMonasteryImage" ordered="false" lowerBound="1" eType="#//java/java/awt/image/BufferedImage"/>
+          <eOperations name="resetMonasteryImage" ordered="false" lowerBound="1"/>
+          <eOperations name="causeDelay" ordered="false" lowerBound="1"/>
+          <eOperations name="currentStroke" ordered="false" lowerBound="1" eType="#//java/java/awt/BasicStroke">
+            <eParameters name="width" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//float"/>
+            <eParameters name="dashed" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean"/>
+          </eOperations>
+          <eOperations name="showSelectedTrajectory" ordered="false" lowerBound="1"/>
+          <eOperations name="showAllTrajectories" ordered="false" lowerBound="1"/>
+          <eOperations name="showHeatMap" ordered="false" lowerBound="1"/>
+          <eOperations name="drawVoronoi" ordered="false" lowerBound="1"/>
+          <eOperations name="showInterestingRoutes" ordered="false" lowerBound="1"/>
+          <eOperations name="showGrid" ordered="false" lowerBound="1">
+            <eParameters name="g" ordered="false" lowerBound="1" eType="#//java/java/awt/Graphics2D"/>
+          </eOperations>
+          <eOperations name="showTrajectory" ordered="false" lowerBound="1">
+            <eParameters name="g" ordered="false" lowerBound="1" eType="#//java/java/awt/Graphics2D"/>
+            <eParameters name="t" ordered="false" lowerBound="1" eType="#//gesto/gesto/Trajectory"/>
+            <eParameters name="arrows" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean"/>
+            <eParameters name="specifiedColor" ordered="false" lowerBound="1" eType="#//java/java/awt/Color"/>
+            <eParameters name="strokeSize" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+            <eParameters name="dashed" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean"/>
+          </eOperations>
+          <eOperations name="showTrajectory" ordered="false" lowerBound="1">
+            <eParameters name="g" ordered="false" lowerBound="1" eType="#//java/java/awt/Graphics2D"/>
+            <eParameters name="t" ordered="false" lowerBound="1" eType="#//gesto/gesto/Trajectory"/>
+          </eOperations>
+          <eOperations name="showStoppingPoints" ordered="false" lowerBound="1">
+            <eParameters name="g" ordered="false" lowerBound="1" eType="#//java/java/awt/Graphics2D"/>
+            <eParameters name="t" ordered="false" lowerBound="1" eType="#//gesto/gesto/Trajectory"/>
+          </eOperations>
+          <eOperations name="drawCircle" ordered="false" lowerBound="1">
+            <eParameters name="g" ordered="false" lowerBound="1" eType="#//java/java/awt/Graphics2D"/>
+            <eParameters name="color" ordered="false" lowerBound="1" eType="#//java/java/awt/Color"/>
+            <eParameters name="centerX" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+            <eParameters name="centerY" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+            <eParameters name="radius" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+            <eParameters name="filled" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean"/>
+          </eOperations>
+          <eOperations name="drawArrowLine" ordered="false" lowerBound="1">
+            <eParameters name="g" ordered="false" lowerBound="1" eType="#//java/java/awt/Graphics2D"/>
+            <eParameters name="x1" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+            <eParameters name="y1" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+            <eParameters name="x2" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+            <eParameters name="y2" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+          </eOperations>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="ARROW_WIDTH" ordered="false"
+              unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"
+              defaultValueLiteral="5"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="ARROW_HEIGHT" ordered="false"
+              unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"
+              defaultValueLiteral="15"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="MONASTERY_IMAGE_FILE"
+              ordered="false" unique="false" lowerBound="1" eType="#//java/java/lang/String"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="monasteryImage" ordered="false"
+              unique="false" lowerBound="1" eType="#//java/java/awt/image/BufferedImage"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="g2d" ordered="false"
+              unique="false" lowerBound="1" eType="#//java/java/awt/Graphics2D"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="frame" ordered="false"
+              unique="false" lowerBound="1" eType="#//gesto/gesto/gui/ImageFrame"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="View_getMonasteryImage"/>
+        <eClassifiers xsi:type="ecore:EClass" name="View_resetMonasteryImage"/>
+        <eClassifiers xsi:type="ecore:EClass" name="View_causeDelay"/>
+        <eClassifiers xsi:type="ecore:EClass" name="View_currentStroke"/>
+        <eClassifiers xsi:type="ecore:EClass" name="View_showSelectedTrajectory"/>
+        <eClassifiers xsi:type="ecore:EClass" name="View_showAllTrajectories"/>
+        <eClassifiers xsi:type="ecore:EClass" name="View_showHeatMap"/>
+        <eClassifiers xsi:type="ecore:EClass" name="View_drawVoronoi"/>
+        <eClassifiers xsi:type="ecore:EClass" name="View_showInterestingRoutes"/>
+        <eClassifiers xsi:type="ecore:EClass" name="View_showGrid"/>
+        <eClassifiers xsi:type="ecore:EClass" name="View_showTrajectory"/>
+        <eClassifiers xsi:type="ecore:EClass" name="View_showTrajectory"/>
+        <eClassifiers xsi:type="ecore:EClass" name="View_showStoppingPoints"/>
+        <eClassifiers xsi:type="ecore:EClass" name="View_drawCircle"/>
+        <eClassifiers xsi:type="ecore:EClass" name="View_drawArrowLine"/>
+      </eSubpackages>
+      <eSubpackages name="voronoi" nsURI="http:///GESTO/gesto/gesto/voronoi.ecore"
+          nsPrefix="GESTO.gesto.gesto.voronoi">
+        <eClassifiers xsi:type="ecore:EClass" name="VoronoiBasic" eSuperTypes="#//importedTypes/javax/swing/JFrame">
+          <eOperations name="VoronoiBasic" ordered="false" lowerBound="1"/>
+          <eOperations name="paint" ordered="false" lowerBound="1">
+            <eParameters name="g" ordered="false" lowerBound="1" eType="#//java/java/awt/Graphics"/>
+          </eOperations>
+          <eOperations name="distance" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double">
+            <eParameters name="x1" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+            <eParameters name="x2" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+            <eParameters name="y1" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+            <eParameters name="y2" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+          </eOperations>
+          <eOperations name="main" ordered="false" lowerBound="1">
+            <eParameters name="args" ordered="false" upperBound="-1" eType="#//java/java/lang/String"/>
+          </eOperations>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="p" ordered="false"
+              unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"
+              defaultValueLiteral="3"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="I" ordered="false"
+              unique="false" lowerBound="1" eType="#//java/java/awt/image/BufferedImage"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="px" ordered="false"
+              unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="py" ordered="false"
+              unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" ordered="false"
+              unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="cells" ordered="false"
+              unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"
+              defaultValueLiteral="100"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" ordered="false"
+              unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"
+              defaultValueLiteral="1000"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="VoronoiBasic_VoronoiBasic"/>
+        <eClassifiers xsi:type="ecore:EClass" name="VoronoiBasic_paint"/>
+        <eClassifiers xsi:type="ecore:EClass" name="VoronoiBasic_distance"/>
+        <eClassifiers xsi:type="ecore:EClass" name="VoronoiBasic_main"/>
+      </eSubpackages>
+    </eSubpackages>
+    <eSubpackages name="voronoi2" nsURI="http:///GESTO/gesto/voronoi2.ecore" nsPrefix="GESTO.gesto.voronoi2">
+      <eClassifiers xsi:type="ecore:EClass" name="Point">
+        <eOperations name="Point" ordered="false" lowerBound="1"/>
+        <eOperations name="setPoint" ordered="false" lowerBound="1">
+          <eParameters name="x" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+          <eParameters name="y" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        </eOperations>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Point_Point"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Point_setPoint"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi">
+        <eOperations name="Voronoi" ordered="false" lowerBound="1">
+          <eParameters name="minDistanceBetweenSites" ordered="false" lowerBound="1"
+              eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        </eOperations>
+        <eOperations name="generateVoronoi" ordered="false" upperBound="-1" eType="#//gesto/voronoi2/GraphEdge">
+          <eParameters name="xValuesIn" ordered="false" upperBound="-1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+          <eParameters name="yValuesIn" ordered="false" upperBound="-1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+          <eParameters name="minX" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+          <eParameters name="maxX" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+          <eParameters name="minY" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+          <eParameters name="maxY" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        </eOperations>
+        <eOperations name="sort" ordered="false" lowerBound="1">
+          <eParameters name="xValuesIn" ordered="false" upperBound="-1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+          <eParameters name="yValuesIn" ordered="false" upperBound="-1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+          <eParameters name="count" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        </eOperations>
+        <eOperations name="qsort" ordered="false" lowerBound="1">
+          <eParameters name="sites" ordered="false" upperBound="-1" eType="#//gesto/voronoi2/Site"/>
+        </eOperations>
+        <eOperations name="sortNode" ordered="false" lowerBound="1">
+          <eParameters name="xValues" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+          <eParameters name="yValues" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+          <eParameters name="numPoints" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        </eOperations>
+        <eOperations name="nextone" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Site"/>
+        <eOperations name="bisect" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Edge">
+          <eParameters name="s1" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Site"/>
+          <eParameters name="s2" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Site"/>
+        </eOperations>
+        <eOperations name="makevertex" ordered="false" lowerBound="1">
+          <eParameters name="v" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Site"/>
+        </eOperations>
+        <eOperations name="PQinitialize" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean"/>
+        <eOperations name="PQbucket" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int">
+          <eParameters name="he" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Halfedge"/>
+        </eOperations>
+        <eOperations name="PQinsert" ordered="false" lowerBound="1">
+          <eParameters name="he" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Halfedge"/>
+          <eParameters name="v" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Site"/>
+          <eParameters name="offset" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        </eOperations>
+        <eOperations name="PQdelete" ordered="false" lowerBound="1">
+          <eParameters name="he" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Halfedge"/>
+        </eOperations>
+        <eOperations name="PQempty" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean"/>
+        <eOperations name="PQ_min" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Point"/>
+        <eOperations name="PQextractmin" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Halfedge"/>
+        <eOperations name="HEcreate" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Halfedge">
+          <eParameters name="e" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Edge"/>
+          <eParameters name="pm" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        </eOperations>
+        <eOperations name="ELinitialize" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean"/>
+        <eOperations name="ELright" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Halfedge">
+          <eParameters name="he" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Halfedge"/>
+        </eOperations>
+        <eOperations name="ELleft" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Halfedge">
+          <eParameters name="he" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Halfedge"/>
+        </eOperations>
+        <eOperations name="leftreg" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Site">
+          <eParameters name="he" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Halfedge"/>
+        </eOperations>
+        <eOperations name="ELinsert" ordered="false" lowerBound="1">
+          <eParameters name="lb" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Halfedge"/>
+          <eParameters name="newHe" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Halfedge"/>
+        </eOperations>
+        <eOperations name="ELdelete" ordered="false" lowerBound="1">
+          <eParameters name="he" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Halfedge"/>
+        </eOperations>
+        <eOperations name="ELgethash" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Halfedge">
+          <eParameters name="b" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        </eOperations>
+        <eOperations name="ELleftbnd" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Halfedge">
+          <eParameters name="p" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Point"/>
+        </eOperations>
+        <eOperations name="pushGraphEdge" ordered="false" lowerBound="1">
+          <eParameters name="leftSite" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Site"/>
+          <eParameters name="rightSite" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Site"/>
+          <eParameters name="x1" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+          <eParameters name="y1" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+          <eParameters name="x2" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+          <eParameters name="y2" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        </eOperations>
+        <eOperations name="clip_line" ordered="false" lowerBound="1">
+          <eParameters name="e" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Edge"/>
+        </eOperations>
+        <eOperations name="endpoint" ordered="false" lowerBound="1">
+          <eParameters name="e" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Edge"/>
+          <eParameters name="lr" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+          <eParameters name="s" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Site"/>
+        </eOperations>
+        <eOperations name="right_of" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean">
+          <eParameters name="el" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Halfedge"/>
+          <eParameters name="p" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Point"/>
+        </eOperations>
+        <eOperations name="rightreg" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Site">
+          <eParameters name="he" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Halfedge"/>
+        </eOperations>
+        <eOperations name="dist" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double">
+          <eParameters name="s" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Site"/>
+          <eParameters name="t" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Site"/>
+        </eOperations>
+        <eOperations name="intersect" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Site">
+          <eParameters name="el1" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Halfedge"/>
+          <eParameters name="el2" ordered="false" lowerBound="1" eType="#//gesto/voronoi2/Halfedge"/>
+        </eOperations>
+        <eOperations name="voronoi_bd" ordered="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="borderMinX" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="borderMaxX" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="borderMinY" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="borderMaxY" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="siteidx" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="xmin" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="xmax" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="ymin" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="ymax" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="deltax" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="deltay" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="nvertices" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="nedges" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="nsites" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="sites" ordered="false"
+            unique="false" upperBound="-1" eType="#//gesto/voronoi2/Site"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="bottomsite" ordered="false"
+            unique="false" lowerBound="1" eType="#//gesto/voronoi2/Site"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="sqrt_nsites" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="minDistanceBetweenSites"
+            ordered="false" unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="PQcount" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="PQmin" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="PQhashsize" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="PQhash" ordered="false"
+            unique="false" lowerBound="1" eType="#//gesto/voronoi2/Halfedge"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="LE" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"
+            defaultValueLiteral="0"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="RE" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"
+            defaultValueLiteral="1"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="ELhashsize" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="ELhash" ordered="false"
+            unique="false" lowerBound="1" eType="#//gesto/voronoi2/Halfedge"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="ELleftend" ordered="false"
+            unique="false" lowerBound="1" eType="#//gesto/voronoi2/Halfedge"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="ELrightend" ordered="false"
+            unique="false" lowerBound="1" eType="#//gesto/voronoi2/Halfedge"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="allEdges" ordered="false"
+            unique="false" upperBound="-1" eType="#//gesto/voronoi2/GraphEdge"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Site">
+        <eOperations name="Site" ordered="false" lowerBound="1"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="coord" ordered="false"
+            unique="false" lowerBound="1" eType="#//gesto/voronoi2/Point"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="sitenbr" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Site_Site"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Halfedge">
+        <eOperations name="Halfedge" ordered="false" lowerBound="1"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="ELleft" ordered="false"
+            unique="false" lowerBound="1" eType="#//gesto/voronoi2/Halfedge"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="ELright" ordered="false"
+            unique="false" lowerBound="1" eType="#//gesto/voronoi2/Halfedge"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="ELedge" ordered="false"
+            unique="false" lowerBound="1" eType="#//gesto/voronoi2/Edge"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="deleted" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//boolean"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="ELpm" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="vertex" ordered="false"
+            unique="false" lowerBound="1" eType="#//gesto/voronoi2/Site"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="ystar" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="PQnext" ordered="false"
+            unique="false" lowerBound="1" eType="#//gesto/voronoi2/Halfedge"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Edge">
+        <eOperations name="Edge" ordered="false" lowerBound="1"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="a" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"
+            defaultValueLiteral="0"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="b" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"
+            defaultValueLiteral="0"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="c" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"
+            defaultValueLiteral="0"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="ep" ordered="false"
+            unique="false" upperBound="-1" eType="#//gesto/voronoi2/Site"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="reg" ordered="false"
+            unique="false" upperBound="-1" eType="#//gesto/voronoi2/Site"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="edgenbr" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Edge_Edge"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Halfedge_Halfedge"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_Voronoi"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_generateVoronoi"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_sort"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_qsort"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_sortNode"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_nextone"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_bisect"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_makevertex"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_PQinitialize"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_PQbucket"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_PQinsert"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_PQdelete"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_PQempty"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_PQ_min"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_PQextractmin"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_HEcreate"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_ELinitialize"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_ELright"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_ELleft"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_leftreg"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_ELinsert"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_ELdelete"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_ELgethash"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_ELleftbnd"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_pushGraphEdge"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_clip_line"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_endpoint"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_right_of"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_rightreg"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_dist"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_intersect"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Voronoi_voronoi_bd"/>
+      <eClassifiers xsi:type="ecore:EClass" name="GraphEdge">
+        <eOperations name="toString" ordered="false" lowerBound="1" eType="#//java/java/lang/String"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="x1" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="y1" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="x2" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="y2" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//double"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="site1" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="site2" ordered="false"
+            unique="false" lowerBound="1" eType="ecore:EDataType JavaLibrary.ecore#//int"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="GraphEdge_toString"/>
+    </eSubpackages>
+  </eSubpackages>
+  <eSubpackages name="java" nsURI="http:///GESTO/java.ecore" nsPrefix="GESTO.java">
+    <eSubpackages name="java" nsURI="http:///GESTO/java/java.ecore" nsPrefix="GESTO.java.java">
+      <eSubpackages name="awt" nsURI="http:///GESTO/java/java/awt.ecore" nsPrefix="GESTO.java.java.awt">
+        <eClassifiers xsi:type="ecore:EClass" name="Color"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Graphics2D"/>
+        <eClassifiers xsi:type="ecore:EClass" name="BasicStroke"/>
+        <eClassifiers xsi:type="ecore:EClass" name="Graphics"/>
+        <eSubpackages name="image" nsURI="http:///GESTO/java/java/awt/image.ecore"
+            nsPrefix="GESTO.java.java.awt.image">
+          <eClassifiers xsi:type="ecore:EClass" name="BufferedImage"/>
+        </eSubpackages>
+      </eSubpackages>
+      <eSubpackages name="util" nsURI="http:///GESTO/java/java/util.ecore" nsPrefix="GESTO.java.java.util">
+        <eClassifiers xsi:type="ecore:EClass" name="Set"/>
+      </eSubpackages>
+      <eSubpackages name="lang" nsURI="http:///GESTO/java/java/lang.ecore" nsPrefix="GESTO.java.java.lang">
+        <eClassifiers xsi:type="ecore:EClass" name="String"/>
+      </eSubpackages>
+    </eSubpackages>
+  </eSubpackages>
+  <eSubpackages name="importedTypes" nsURI="http:///GESTO/importedTypes.ecore" nsPrefix="GESTO.importedTypes">
+    <eSubpackages name="javax" nsURI="http:///GESTO/importedTypes/javax.ecore" nsPrefix="GESTO.importedTypes.javax">
+      <eSubpackages name="swing" nsURI="http:///GESTO/importedTypes/javax/swing.ecore"
+          nsPrefix="GESTO.importedTypes.javax.swing">
+        <eClassifiers xsi:type="ecore:EClass" name="JTextArea"/>
+        <eClassifiers xsi:type="ecore:EClass" name="ImageIcon"/>
+        <eClassifiers xsi:type="ecore:EClass" name="JLabel"/>
+        <eClassifiers xsi:type="ecore:EClass" name="JMenuBar"/>
+        <eClassifiers xsi:type="ecore:EClass" name="JMenu"/>
+        <eClassifiers xsi:type="ecore:EClass" name="JCheckBoxMenuItem"/>
+        <eClassifiers xsi:type="ecore:EClass" name="JMenuItem"/>
+        <eClassifiers xsi:type="ecore:EClass" name="JFrame"/>
+      </eSubpackages>
+    </eSubpackages>
+  </eSubpackages>
+</ecore:EPackage>

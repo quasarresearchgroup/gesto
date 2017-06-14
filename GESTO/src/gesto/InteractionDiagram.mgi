@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <CommunicationClass name="gesto.Point" x="273" y="274"/>
+    <CommunicationClass name="gesto.ColorGradient" x="636" y="59"/>
+    <CommunicationClass name="gesto.KMeansBasic" x="40" y="376">
+        <Association destinationClassName="gesto.Cluster"
+            endpointName="clusters" kind="Simple"/>
+        <Association destinationClassName="gesto.Point"
+            endpointName="points" kind="Simple"/>
+        <Communication destinationClassName="gesto.Point"/>
+        <Communication destinationClassName="gesto.Cluster"/>
+    </CommunicationClass>
+    <CommunicationClass name="gesto.Trajectory" x="644" y="273">
+        <Association destinationClassName="gesto.SubjectType"
+            endpointName="type" kind="Simple"/>
+        <Association destinationClassName="gesto.Point"
+            endpointName="points" kind="Simple"/>
+        <Communication destinationClassName="gesto.Point"/>
+        <Communication destinationClassName="gesto.Model"/>
+    </CommunicationClass>
+    <CommunicationClass name="gesto.Cluster" x="281" y="456">
+        <Association destinationClassName="gesto.Point"
+            endpointName="centroid" kind="Simple"/>
+        <Association destinationClassName="gesto.Point"
+            endpointName="points" kind="Simple"/>
+    </CommunicationClass>
+    <CommunicationClass name="gesto.Main" x="242" y="77">
+        <Communication destinationClassName="gesto.Model"/>
+    </CommunicationClass>
+    <CommunicationClass name="gesto.Model" x="403" y="155">
+        <Association destinationClassName="gesto.Trajectory"
+            endpointName="allTrajectories" kind="Simple"/>
+        <Communication destinationClassName="gesto.Point"/>
+        <Communication destinationClassName="gesto.Trajectory">
+            <Point x="684" y="170"/>
+        </Communication>
+        <Communication destinationClassName="gesto.SubjectType"/>
+    </CommunicationClass>
+    <CommunicationClass name="gesto.SubjectType" x="390" y="54"/>
+</ClassDiagram>
