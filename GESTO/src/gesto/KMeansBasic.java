@@ -9,7 +9,7 @@ import voronoi2.Voronoi;
 public abstract class KMeansBasic
 {
 	// Number of Clusters. This metric should be related to the number of points
-	private static int NUM_CLUSTERS = 6;
+	private static int NUM_CLUSTERS = 7;
 
 	private static List<Point> points = new ArrayList<Point>();
 	private static List<Cluster> clusters = new ArrayList<Cluster>();

@@ -167,7 +167,7 @@ public class Trajectory
 		+ "Time walking->" + timeWalking()/1000 + " s [" + (timeWalking() * 100) / (timeWalking()+ timeStopped()) +"%] " 
 	  + "Time stopped->" + timeStopped()/1000 + " s [" + (timeStopped() * 100) / (timeWalking()+ timeStopped()) +"%] Total duration->" 
 	  + totalDuration() + " s\n"
-	  + "Average speed (including stops)->" + String.format("%.3f", averageSpeed()) + " m/s "
+	  + " Average speed (including stops)->" + String.format("%.3f", averageSpeed()) + " m/s "
 	  + (this==Model.mostCommon() ? "[MOST COMMON]" : (this==Model.mostDissimilar() ? "[MOST UNCOMMON]" : ""))
 	  + (this==Model.longer() ? "[LONGER]" : (this==Model.shorter() ? "[SHORTER]" : ""))
 	  + (this==Model.faster() ? "[FASTER]" : (this==Model.slower() ? "[SLOWER]" : ""));
