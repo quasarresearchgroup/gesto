@@ -1,10 +1,10 @@
-package gesto;
+package org.quasar.gesto;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import voronoi2.GraphEdge;
-import voronoi2.Voronoi;
+import org.quasar.voronoi2.GraphEdge;
+import org.quasar.voronoi2.Voronoi;
 
 public abstract class KMeansBasic
 {

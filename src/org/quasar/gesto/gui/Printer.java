@@ -1,10 +1,10 @@
-package gesto.gui;
+package org.quasar.gesto.gui;
 
 import javax.swing.JTextArea;
 
-import gesto.Model;
-import gesto.Point;
-import gesto.Trajectory;
+import org.quasar.gesto.Model;
+import org.quasar.gesto.Point;
+import org.quasar.gesto.Trajectory;
 
 public abstract class Printer
 {

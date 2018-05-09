@@ -1,4 +1,4 @@
-package gesto.gui;
+package org.quasar.gesto.gui;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,8 +11,8 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 
-import gesto.Model;
-import gesto.SubjectType;
+import org.quasar.gesto.Model;
+import org.quasar.gesto.SubjectType;
 
 public class GestoMenuBar extends JMenuBar
 {

@@ -1,4 +1,4 @@
-package gesto;
+package org.quasar.gesto;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package gesto.gui;
+package org.quasar.gesto.gui;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;

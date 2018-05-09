@@ -1,4 +1,4 @@
-package gesto.gui;
+package org.quasar.gesto.gui;
 
 import java.awt.BasicStroke;
 import java.awt.BorderLayout;
@@ -19,14 +19,14 @@ import javax.imageio.ImageIO;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 
-import gesto.Cluster;
-import gesto.ColorGradient;
-import gesto.KMeansBasic;
-import gesto.Model;
-import gesto.Point;
-import gesto.Trajectory;
-import voronoi2.GraphEdge;
-import voronoi2.Voronoi;
+import org.quasar.gesto.Cluster;
+import org.quasar.gesto.ColorGradient;
+import org.quasar.gesto.KMeansBasic;
+import org.quasar.gesto.Model;
+import org.quasar.gesto.Point;
+import org.quasar.gesto.Trajectory;
+import org.quasar.voronoi2.GraphEdge;
+import org.quasar.voronoi2.Voronoi;
 
 public class View
 {

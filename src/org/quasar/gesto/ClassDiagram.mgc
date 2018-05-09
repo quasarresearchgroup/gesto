@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ClassDiagram>
-    <Class name="gesto.Point" x="615" y="362">
+    <Class name="org.quasar.gesto.Point" x="615" y="362">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
             default-accepted="true" static-accepted="false"/>
@@ -9,7 +9,7 @@
             default-accepted="false" static-accepted="false"
             accessors-accepted="false" constructors-accepted="false"/>
     </Class>
-    <Class name="gesto.ColorGradient" x="312" y="41">
+    <Class name="org.quasar.gesto.ColorGradient" x="312" y="41">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
             default-accepted="true" static-accepted="false"/>
@@ -18,7 +18,7 @@
             default-accepted="false" static-accepted="false"
             accessors-accepted="false" constructors-accepted="false"/>
     </Class>
-    <Class name="gesto.KMeansBasic" x="383" y="324">
+    <Class name="org.quasar.gesto.KMeansBasic" x="383" y="324">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
             default-accepted="true" static-accepted="false"/>
@@ -26,14 +26,14 @@
             private-accepted="false" protected-accepted="false"
             default-accepted="false" static-accepted="false"
             accessors-accepted="false" constructors-accepted="false"/>
-        <Association destinationClassName="gesto.Cluster"
+        <Association destinationClassName="org.quasar.gesto.Cluster"
             endpointName="clusters" kind="Simple"/>
-        <Association destinationClassName="gesto.Point"
+        <Association destinationClassName="org.quasar.gesto.Point"
             endpointName="points" kind="Simple"/>
-        <Communication destinationClassName="gesto.Point"/>
-        <Communication destinationClassName="gesto.Cluster"/>
+        <Communication destinationClassName="org.quasar.gesto.Point"/>
+        <Communication destinationClassName="org.quasar.gesto.Cluster"/>
     </Class>
-    <Class name="gesto.Trajectory" x="612" y="144">
+    <Class name="org.quasar.gesto.Trajectory" x="612" y="144">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
             default-accepted="true" static-accepted="false"/>
@@ -41,14 +41,14 @@
             private-accepted="false" protected-accepted="false"
             default-accepted="false" static-accepted="false"
             accessors-accepted="false" constructors-accepted="false"/>
-        <Association destinationClassName="gesto.SubjectType"
+        <Association destinationClassName="org.quasar.gesto.SubjectType"
             endpointName="type" kind="Simple"/>
-        <Association destinationClassName="gesto.Point"
+        <Association destinationClassName="org.quasar.gesto.Point"
             endpointName="points" kind="Simple"/>
-        <Communication destinationClassName="gesto.Point"/>
-        <Communication destinationClassName="gesto.Model"/>
+        <Communication destinationClassName="org.quasar.gesto.Point"/>
+        <Communication destinationClassName="org.quasar.gesto.Model"/>
     </Class>
-    <Class name="gesto.Cluster" x="149" y="407">
+    <Class name="org.quasar.gesto.Cluster" x="149" y="407">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
             default-accepted="true" static-accepted="false"/>
@@ -56,14 +56,14 @@
             private-accepted="false" protected-accepted="false"
             default-accepted="false" static-accepted="false"
             accessors-accepted="false" constructors-accepted="false"/>
-        <Association destinationClassName="gesto.Point"
+        <Association destinationClassName="org.quasar.gesto.Point"
             endpointName="centroid" kind="Simple">
             <Point x="419" y="523"/>
         </Association>
-        <Association destinationClassName="gesto.Point"
+        <Association destinationClassName="org.quasar.gesto.Point"
             endpointName="points" kind="Simple"/>
     </Class>
-    <Class name="gesto.Main" x="180" y="165">
+    <Class name="org.quasar.gesto.Main" x="180" y="165">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
             default-accepted="true" static-accepted="false"/>
@@ -71,9 +71,9 @@
             private-accepted="false" protected-accepted="false"
             default-accepted="false" static-accepted="false"
             accessors-accepted="false" constructors-accepted="false"/>
-        <Communication destinationClassName="gesto.Model"/>
+        <Communication destinationClassName="org.quasar.gesto.Model"/>
     </Class>
-    <Class name="gesto.Model" x="669" y="26">
+    <Class name="org.quasar.gesto.Model" x="669" y="26">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
             default-accepted="true" static-accepted="false"/>
@@ -81,13 +81,13 @@
             private-accepted="false" protected-accepted="false"
             default-accepted="false" static-accepted="false"
             accessors-accepted="false" constructors-accepted="false"/>
-        <Association destinationClassName="gesto.Trajectory"
+        <Association destinationClassName="org.quasar.gesto.Trajectory"
             endpointName="allTrajectories" kind="Simple"/>
-        <Communication destinationClassName="gesto.Point"/>
-        <Communication destinationClassName="gesto.Trajectory"/>
-        <Communication destinationClassName="gesto.SubjectType"/>
+        <Communication destinationClassName="org.quasar.gesto.Point"/>
+        <Communication destinationClassName="org.quasar.gesto.Trajectory"/>
+        <Communication destinationClassName="org.quasar.gesto.SubjectType"/>
     </Class>
-    <Class name="gesto.SubjectType" x="881" y="166">
+    <Class name="org.quasar.gesto.SubjectType" x="881" y="166">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
             default-accepted="true" static-accepted="false"/>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:PapyrusJava="http://www.eclipse.org/papyrus/PapyrusJava/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
   <uml:Model xmi:id="_aACnoFEBEeeLruS_wtx-LQ" name="GESTO">
-    <packagedElement xmi:type="uml:Package" xmi:id="_hiSREFEBEeeLruS_wtx-LQ" name="gesto">
-      <packagedElement xmi:type="uml:Package" xmi:id="_hzn4sFEBEeeLruS_wtx-LQ" name="gesto">
+    <packagedElement xmi:type="uml:Package" xmi:id="_hiSREFEBEeeLruS_wtx-LQ" name="org.quasar.gesto">
+      <packagedElement xmi:type="uml:Package" xmi:id="_hzn4sFEBEeeLruS_wtx-LQ" name="org.quasar.gesto">
         <packagedElement xmi:type="uml:Class" xmi:id="_hz4XYFEBEeeLruS_wtx-LQ" name="Model" visibility="public" isAbstract="true">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_iLEIUFEBEeeLruS_wtx-LQ" name="TRAJECTORIES_POINTS_FILE" visibility="private" isLeaf="true" isStatic="true" type="_h0PjwFEBEeeLruS_wtx-LQ" isUnique="false">
             <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_iLPHcFEBEeeLruS_wtx-LQ" name="defaultValue">
@@ -2916,7 +2916,7 @@
           </packagedElement>
         </packagedElement>
       </packagedElement>
-      <packagedElement xmi:type="uml:Package" xmi:id="_i_8h4FEBEeeLruS_wtx-LQ" name="voronoi2">
+      <packagedElement xmi:type="uml:Package" xmi:id="_i_8h4FEBEeeLruS_wtx-LQ" name="org.quasar.voronoi2">
         <packagedElement xmi:type="uml:Class" xmi:id="_i_--IFEBEeeLruS_wtx-LQ" name="GraphEdge" visibility="public">
           <ownedAttribute xmi:type="uml:Property" xmi:id="_jYasQFEBEeeLruS_wtx-LQ" name="x1" visibility="public" isUnique="false">
             <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>

@@ -1,4 +1,4 @@
-package gesto;
+package org.quasar.gesto;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-import gesto.gui.Configuration;
+import org.quasar.gesto.gui.Configuration;
 
 public abstract class Model
 {

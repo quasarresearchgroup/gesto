@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <CommunicationClass name="org.quasar.gesto.Point" x="273" y="274"/>
+    <CommunicationClass name="org.quasar.gesto.ColorGradient" x="636" y="59"/>
+    <CommunicationClass name="org.quasar.gesto.KMeansBasic" x="40" y="376">
+        <Association destinationClassName="org.quasar.gesto.Cluster"
+            endpointName="clusters" kind="Simple"/>
+        <Association destinationClassName="org.quasar.gesto.Point"
+            endpointName="points" kind="Simple"/>
+        <Communication destinationClassName="org.quasar.gesto.Point"/>
+        <Communication destinationClassName="org.quasar.gesto.Cluster"/>
+    </CommunicationClass>
+    <CommunicationClass name="org.quasar.gesto.Trajectory" x="644" y="273">
+        <Association destinationClassName="org.quasar.gesto.SubjectType"
+            endpointName="type" kind="Simple"/>
+        <Association destinationClassName="org.quasar.gesto.Point"
+            endpointName="points" kind="Simple"/>
+        <Communication destinationClassName="org.quasar.gesto.Point"/>
+        <Communication destinationClassName="org.quasar.gesto.Model"/>
+    </CommunicationClass>
+    <CommunicationClass name="org.quasar.gesto.Cluster" x="281" y="456">
+        <Association destinationClassName="org.quasar.gesto.Point"
+            endpointName="centroid" kind="Simple"/>
+        <Association destinationClassName="org.quasar.gesto.Point"
+            endpointName="points" kind="Simple"/>
+    </CommunicationClass>
+    <CommunicationClass name="org.quasar.gesto.Main" x="242" y="77">
+        <Communication destinationClassName="org.quasar.gesto.Model"/>
+    </CommunicationClass>
+    <CommunicationClass name="org.quasar.gesto.Model" x="403" y="155">
+        <Association destinationClassName="org.quasar.gesto.Trajectory"
+            endpointName="allTrajectories" kind="Simple"/>
+        <Communication destinationClassName="org.quasar.gesto.Point"/>
+        <Communication destinationClassName="org.quasar.gesto.Trajectory">
+            <Point x="684" y="170"/>
+        </Communication>
+        <Communication destinationClassName="org.quasar.gesto.SubjectType"/>
+    </CommunicationClass>
+    <CommunicationClass name="org.quasar.gesto.SubjectType" x="390" y="54"/>
+</ClassDiagram>

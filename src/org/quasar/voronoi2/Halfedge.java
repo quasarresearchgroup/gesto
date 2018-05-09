@@ -26,16 +26,20 @@ authors and should not be interpreted as representing official policies, either 
 or implied, of James Humphreys.
  */
 
-package voronoi2;
+package org.quasar.voronoi2;
 
-// used both for sites and for vertices
-public class Site
+public class Halfedge
 {
-    Point coord;
-    int sitenbr;
+    Halfedge ELleft, ELright;
+    Edge ELedge;
+    boolean deleted;
+    int ELpm;
+    Site vertex;
+    double ystar;
+    Halfedge PQnext;
 
-    public Site()
+    public Halfedge()
     {
-        coord = new Point();
+        PQnext = null;
     }
 }

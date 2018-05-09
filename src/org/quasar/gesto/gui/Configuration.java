@@ -1,10 +1,10 @@
-package gesto.gui;
+package org.quasar.gesto.gui;
 
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-import gesto.SubjectType;
+import org.quasar.gesto.SubjectType;
 
 public abstract class Configuration
 {

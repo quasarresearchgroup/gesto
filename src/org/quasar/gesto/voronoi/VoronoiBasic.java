@@ -1,4 +1,4 @@
-package gesto.voronoi;
+package org.quasar.gesto.voronoi;
 
 import java.awt.Color;
 import java.awt.Graphics;

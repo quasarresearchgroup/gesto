@@ -1,3 +1,5 @@
+package org.quasar.voronoi2;
+
 /*
   Copyright 2011 James Humphreys. All rights reserved.
 
@@ -26,20 +28,20 @@ authors and should not be interpreted as representing official policies, either 
 or implied, of James Humphreys.
  */
 
-package voronoi2;
-
-public class Halfedge
+/**
+ *
+ * @author James Humphreys
+ */
+class Edge
 {
-    Halfedge ELleft, ELright;
-    Edge ELedge;
-    boolean deleted;
-    int ELpm;
-    Site vertex;
-    double ystar;
-    Halfedge PQnext;
+    public double a = 0, b = 0, c = 0;
+    Site[] ep;  // JH: End points?
+    Site[] reg; // JH: Sites this edge bisects?
+    int edgenbr;
 
-    public Halfedge()
+    Edge()
     {
-        PQnext = null;
+        ep = new Site[2];
+        reg = new Site[2];
     }
 }

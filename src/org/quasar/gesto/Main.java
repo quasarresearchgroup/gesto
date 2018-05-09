@@ -1,10 +1,10 @@
-package gesto;
+package org.quasar.gesto;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
-import gesto.gui.GestoGUI;
+import org.quasar.gesto.gui.GestoGUI;
 
 
 /***********************************************************

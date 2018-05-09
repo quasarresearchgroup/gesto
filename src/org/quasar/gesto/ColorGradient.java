@@ -1,4 +1,4 @@
-package gesto;
+package org.quasar.gesto;
 import java.awt.Color;
 import java.util.Arrays;
 import java.util.List;

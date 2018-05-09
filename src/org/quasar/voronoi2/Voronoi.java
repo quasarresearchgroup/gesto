@@ -1,4 +1,4 @@
-package voronoi2;
+package org.quasar.voronoi2;
 
 /*
  * The author of this software is Steven Fortune.  Copyright (c) 1994 by AT&T

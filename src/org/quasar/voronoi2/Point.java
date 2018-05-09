@@ -26,7 +26,7 @@ authors and should not be interpreted as representing official policies, either 
 or implied, of James Humphreys.
  */
 
-package voronoi2;
+package org.quasar.voronoi2;
 
 class Point
 {

@@ -1,4 +1,4 @@
-package gesto;
+package org.quasar.gesto;
 
 public enum SubjectType
 {

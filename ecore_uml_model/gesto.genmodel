@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
-    modelDirectory="/gesto/src" modelPluginID="gesto" modelName="Gesto"
+    modelDirectory="/org.quasar.gesto/src" modelPluginID="org.quasar.gesto" modelName="Gesto"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.uml2.uml.ecore.importer"
     complianceLevel="8.0" copyrightFields="false" usedGenPackages="model.genmodel#//JavaLibrary"
     operationReflection="true" importOrganizing="true">
@@ -33,826 +33,826 @@
   <genPackages xsi:type="genmodel:GenPackage" prefix="GESTO" disposableProviderFactory="true"
       ecorePackage="GESTO.ecore#/">
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Gesto" disposableProviderFactory="true"
-        ecorePackage="GESTO.ecore#//gesto">
+        ecorePackage="GESTO.ecore#//org.quasar.gesto">
       <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Gesto" disposableProviderFactory="true"
-          ecorePackage="GESTO.ecore#//gesto/gesto">
-        <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="GESTO.ecore#//gesto/gesto/SubjectType">
-          <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GESTO.ecore#//gesto/gesto/SubjectType/FRESHMAN"/>
-          <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GESTO.ecore#//gesto/gesto/SubjectType/FINALIST"/>
+          ecorePackage="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto">
+        <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/SubjectType">
+          <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/SubjectType/FRESHMAN"/>
+          <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/SubjectType/FINALIST"/>
         </genEnums>
-        <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GESTO.ecore#//gesto/gesto/Model">
+        <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model">
           <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/gesto/Model/TRAJECTORIES_POINTS_FILE"/>
+              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model/TRAJECTORIES_POINTS_FILE"/>
           <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/gesto/Model/allTrajectories"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/Model/adjacencyMatrix"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/Model/HIGHEST_SPEED"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/Model/LOWEST_SPEED"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/Model/LONGEST_STOP"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/Model/AVERAGE_STOP"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Model/getAllTrajectories"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Model/getAdjacencyMatrix"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Model/readTrajectories"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Model/fillMatrix"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Model/mostCommon"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Model/mostDissimilar"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Model/longestStop"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Model/averageStop"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Model/highestSpeed"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Model/lowestSpeed"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Model/shorter"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Model/longer"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Model/slower"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Model/faster"/>
+              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model/allTrajectories"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model/adjacencyMatrix"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model/HIGHEST_SPEED"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model/LOWEST_SPEED"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model/LONGEST_STOP"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model/AVERAGE_STOP"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model/getAllTrajectories"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model/getAdjacencyMatrix"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model/readTrajectories"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model/fillMatrix"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model/mostCommon"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model/mostDissimilar"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model/longestStop"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model/averageStop"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model/highestSpeed"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model/lowestSpeed"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model/shorter"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model/longer"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model/slower"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model/faster"/>
         </genClasses>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Trajectory">
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/Trajectory/type"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory">
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory/type"/>
           <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/gesto/Trajectory/subject"/>
+              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory/subject"/>
           <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/gesto/Trajectory/points"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Trajectory/Trajectory">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Trajectory/Trajectory/type"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Trajectory/Trajectory/subject"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Trajectory/Trajectory/points"/>
+              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory/points"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory/Trajectory">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory/Trajectory/type"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory/Trajectory/subject"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory/Trajectory/points"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Trajectory/getType"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Trajectory/getSubject"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Trajectory/getPoints"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Trajectory/timeWalking"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Trajectory/timeStopped"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Trajectory/totalDuration"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Trajectory/distanceWalked"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Trajectory/averageSpeed"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Trajectory/distanceTo">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Trajectory/distanceTo/another"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory/getType"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory/getSubject"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory/getPoints"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory/timeWalking"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory/timeStopped"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory/totalDuration"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory/distanceWalked"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory/averageSpeed"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory/distanceTo">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory/distanceTo/another"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Trajectory/toString"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory/toString"/>
         </genClasses>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Point">
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/Point/canvasWidth"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/Point/canvasHeight"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/Point/order"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/Point/x"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/Point/y"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/Point/distanceFromPrevious"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/Point/timeStopped"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/Point/timeFromPrevious"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/Point/cluster_number"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Point/setCanvas">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Point/setCanvas/width"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Point/setCanvas/height"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point">
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/canvasWidth"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/canvasHeight"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/order"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/x"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/y"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/distanceFromPrevious"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/timeStopped"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/timeFromPrevious"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/cluster_number"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/setCanvas">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/setCanvas/width"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/setCanvas/height"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Point/Point">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Point/Point/order"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Point/Point/x"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Point/Point/y"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Point/Point/distanceFromPrevious"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Point/Point/timeStopped"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Point/Point/timeFromPrevious"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/Point">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/Point/order"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/Point/x"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/Point/y"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/Point/distanceFromPrevious"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/Point/timeStopped"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/Point/timeFromPrevious"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Point/Point.1">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Point/Point.1/x"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Point/Point.1/y"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/Point.1">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/Point.1/x"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/Point.1/y"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Point/getAction"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Point/getX"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Point/getY"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Point/setX">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Point/setX/x"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/getAction"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/getX"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/getY"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/setX">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/setX/x"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Point/setY">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Point/setY/y"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/setY">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/setY/y"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Point/setCluster">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Point/setCluster/n"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/setCluster">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/setCluster/n"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Point/getCluster"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Point/getCanvasX"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Point/getCanvasY"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Point/distanceTo">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Point/distanceTo/other"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/getCluster"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/getCanvasX"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/getCanvasY"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/distanceTo">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/distanceTo/other"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Point/getDistanceFromPrevious"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Point/getTimeStopped"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Point/getTimeFromPrevious"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Point/getSpeedFromPrevious"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Point/createRandomPoint">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Point/createRandomPoint/minX"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Point/createRandomPoint/maxX"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Point/createRandomPoint/minY"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Point/createRandomPoint/maxY"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/getDistanceFromPrevious"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/getTimeStopped"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/getTimeFromPrevious"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/getSpeedFromPrevious"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/createRandomPoint">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/createRandomPoint/minX"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/createRandomPoint/maxX"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/createRandomPoint/minY"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/createRandomPoint/maxY"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Point/createRandomPoint.1">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Point/createRandomPoint.1/min"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Point/createRandomPoint.1/max"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/createRandomPoint.1">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/createRandomPoint.1/min"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/createRandomPoint.1/max"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Point/createRandomPoints">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Point/createRandomPoints/min"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Point/createRandomPoints/max"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Point/createRandomPoints/number"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/createRandomPoints">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/createRandomPoints/min"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/createRandomPoints/max"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/createRandomPoints/number"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Point/toString"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point/toString"/>
         </genClasses>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Point_setCanvas"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Point_Point"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Point_Point.1"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Point_getAction"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Point_getX"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Point_getY"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Point_setX"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Point_setY"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Point_setCluster"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Point_getCluster"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Point_getCanvasX"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Point_getCanvasY"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Point_distanceTo"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Point_getDistanceFromPrevious"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Point_getTimeStopped"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Point_getTimeFromPrevious"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Point_getSpeedFromPrevious"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Point_createRandomPoint"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Point_createRandomPoint.1"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Point_createRandomPoints"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Point_toString"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Trajectory_Trajectory"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Trajectory_getType"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Trajectory_getSubject"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Trajectory_getPoints"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Trajectory_timeWalking"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Trajectory_timeStopped"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Trajectory_totalDuration"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Trajectory_distanceWalked"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Trajectory_averageSpeed"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Trajectory_distanceTo"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Trajectory_toString"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Model_getAllTrajectories"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Model_getAdjacencyMatrix"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Model_readTrajectories"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Model_fillMatrix"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Model_mostCommon"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Model_mostDissimilar"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Model_longestStop"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Model_averageStop"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Model_highestSpeed"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Model_lowestSpeed"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Model_shorter"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Model_longer"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Model_slower"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Model_faster"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Main">
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Main/main">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Main/main/args"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point_setCanvas"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point_Point"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point_Point.1"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point_getAction"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point_getX"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point_getY"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point_setX"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point_setY"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point_setCluster"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point_getCluster"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point_getCanvasX"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point_getCanvasY"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point_distanceTo"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point_getDistanceFromPrevious"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point_getTimeStopped"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point_getTimeFromPrevious"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point_getSpeedFromPrevious"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point_createRandomPoint"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point_createRandomPoint.1"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point_createRandomPoints"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Point_toString"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory_Trajectory"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory_getType"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory_getSubject"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory_getPoints"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory_timeWalking"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory_timeStopped"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory_totalDuration"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory_distanceWalked"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory_averageSpeed"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory_distanceTo"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Trajectory_toString"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model_getAllTrajectories"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model_getAdjacencyMatrix"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model_readTrajectories"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model_fillMatrix"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model_mostCommon"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model_mostDissimilar"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model_longestStop"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model_averageStop"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model_highestSpeed"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model_lowestSpeed"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model_shorter"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model_longer"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model_slower"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Model_faster"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Main">
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Main/main">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Main/main/args"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Main/initializeLookAndFeel"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Main/initializeLookAndFeel"/>
         </genClasses>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Main_main"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Main_initializeLookAndFeel"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Cluster">
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Main_main"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Main_initializeLookAndFeel"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Cluster">
           <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/gesto/Cluster/points"/>
+              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Cluster/points"/>
           <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/gesto/Cluster/centroid"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/Cluster/id"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Cluster/Cluster">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Cluster/Cluster/id"/>
+              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Cluster/centroid"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Cluster/id"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Cluster/Cluster">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Cluster/Cluster/id"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Cluster/getPoints"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Cluster/addPoint">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Cluster/addPoint/point"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Cluster/getPoints"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Cluster/addPoint">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Cluster/addPoint/point"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Cluster/setPoints">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Cluster/setPoints/points"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Cluster/setPoints">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Cluster/setPoints/points"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Cluster/getCentroid"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Cluster/setCentroid">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/Cluster/setCentroid/centroid"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Cluster/getCentroid"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Cluster/setCentroid">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Cluster/setCentroid/centroid"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Cluster/getId"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Cluster/clear"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/Cluster/plotCluster"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Cluster/getId"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Cluster/clear"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Cluster/plotCluster"/>
         </genClasses>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Cluster_Cluster"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Cluster_getPoints"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Cluster_addPoint"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Cluster_setPoints"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Cluster_getCentroid"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Cluster_setCentroid"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Cluster_getId"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Cluster_clear"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Cluster_plotCluster"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/ColorGradient">
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Cluster_Cluster"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Cluster_getPoints"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Cluster_addPoint"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Cluster_setPoints"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Cluster_getCentroid"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Cluster_setCentroid"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Cluster_getId"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Cluster_clear"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Cluster_plotCluster"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient">
           <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/gesto/ColorGradient/gradient"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/ColorGradient/current"/>
+              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient/gradient"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient/current"/>
           <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/gesto/ColorGradient/COOLEST"/>
+              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient/COOLEST"/>
           <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/gesto/ColorGradient/WARMEST"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/ColorGradient/ColorGradient"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/ColorGradient/ColorGradient.1">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/ColorGradient/ColorGradient.1/initialValue"/>
+              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient/WARMEST"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient/ColorGradient"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient/ColorGradient.1">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient/ColorGradient.1/initialValue"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/ColorGradient/ColorGradient.2">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/ColorGradient/ColorGradient.2/actual"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient/ColorGradient.2">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient/ColorGradient.2/actual"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/ColorGradient/currentColor"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/ColorGradient/contains">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/ColorGradient/contains/given"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient/currentColor"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient/contains">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient/contains/given"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/ColorGradient/quartile">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/ColorGradient/quartile/given"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient/quartile">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient/quartile/given"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/ColorGradient/warmUp">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/ColorGradient/warmUp/value"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient/warmUp">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient/warmUp/value"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/ColorGradient/coolDown">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/ColorGradient/coolDown/value"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient/coolDown">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient/coolDown/value"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/ColorGradient/relativeColor">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/ColorGradient/relativeColor/percentage"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient/relativeColor">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient/relativeColor/percentage"/>
           </genOperations>
         </genClasses>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/ColorGradient_ColorGradient"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/ColorGradient_ColorGradient.1"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/ColorGradient_ColorGradient.2"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/ColorGradient_currentColor"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/ColorGradient_contains"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/ColorGradient_quartile"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/ColorGradient_warmUp"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/ColorGradient_coolDown"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/ColorGradient_relativeColor"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/Character"/>
-        <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GESTO.ecore#//gesto/gesto/KMeansBasic">
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/KMeansBasic/NUM_CLUSTERS"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient_ColorGradient"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient_ColorGradient.1"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient_ColorGradient.2"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient_currentColor"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient_contains"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient_quartile"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient_warmUp"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient_coolDown"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/ColorGradient_relativeColor"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/Character"/>
+        <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic">
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic/NUM_CLUSTERS"/>
           <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/gesto/KMeansBasic/points"/>
+              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic/points"/>
           <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/gesto/KMeansBasic/clusters"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/KMeansBasic/setPoints">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/KMeansBasic/setPoints/list"/>
+              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic/clusters"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic/setPoints">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic/setPoints/list"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/KMeansBasic/clusterCentroids">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/KMeansBasic/clusterCentroids/minX"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/KMeansBasic/clusterCentroids/maxX"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/KMeansBasic/clusterCentroids/minY"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/KMeansBasic/clusterCentroids/maxY"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic/clusterCentroids">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic/clusterCentroids/minX"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic/clusterCentroids/maxX"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic/clusterCentroids/minY"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic/clusterCentroids/maxY"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/KMeansBasic/voronoiEdges">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/KMeansBasic/voronoiEdges/centroids"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/KMeansBasic/voronoiEdges/minX"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/KMeansBasic/voronoiEdges/maxX"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/KMeansBasic/voronoiEdges/minY"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/KMeansBasic/voronoiEdges/maxY"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic/voronoiEdges">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic/voronoiEdges/centroids"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic/voronoiEdges/minX"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic/voronoiEdges/maxX"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic/voronoiEdges/minY"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic/voronoiEdges/maxY"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/KMeansBasic/plotClusters"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/KMeansBasic/calculate"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/KMeansBasic/clearClusters"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/KMeansBasic/getCentroids"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/KMeansBasic/assignCluster"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/KMeansBasic/calculateCentroids"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic/plotClusters"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic/calculate"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic/clearClusters"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic/getCentroids"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic/assignCluster"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic/calculateCentroids"/>
         </genClasses>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/KMeansBasic_setPoints"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/KMeansBasic_clusterCentroids"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/KMeansBasic_voronoiEdges"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/KMeansBasic_plotClusters"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/KMeansBasic_calculate"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/KMeansBasic_clearClusters"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/KMeansBasic_getCentroids"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/KMeansBasic_assignCluster"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/KMeansBasic_calculateCentroids"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic_setPoints"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic_clusterCentroids"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic_voronoiEdges"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic_plotClusters"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic_calculate"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic_clearClusters"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic_getCentroids"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic_assignCluster"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/KMeansBasic_calculateCentroids"/>
         <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Gui" disposableProviderFactory="true"
-            ecorePackage="GESTO.ecore#//gesto/gesto/gui">
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoGUI">
-            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/gui/GestoGUI/FRAME_WIDTH"/>
-            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/gui/GestoGUI/FRAME_HEIGHT"/>
+            ecorePackage="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui">
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoGUI">
+            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoGUI/FRAME_WIDTH"/>
+            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoGUI/FRAME_HEIGHT"/>
             <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-                propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/gesto/gui/GestoGUI/texto"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoGUI/getTexto"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoGUI/setTexto">
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/GestoGUI/setTexto/texto"/>
+                propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoGUI/texto"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoGUI/getTexto"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoGUI/setTexto">
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoGUI/setTexto/texto"/>
             </genOperations>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoGUI/GestoGUI"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoGUI/createTextArea">
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/GestoGUI/createTextArea/imageIcon"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoGUI/GestoGUI"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoGUI/createTextArea">
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoGUI/createTextArea/imageIcon"/>
             </genOperations>
           </genClasses>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoGUI_getTexto"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoGUI_setTexto"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoGUI_GestoGUI"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoGUI_createTextArea"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/ImageFrame">
-            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/gui/ImageFrame/serialVersionUID"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoGUI_getTexto"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoGUI_setTexto"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoGUI_GestoGUI"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoGUI_createTextArea"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/ImageFrame">
+            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/ImageFrame/serialVersionUID"/>
             <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-                propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/gesto/gui/ImageFrame/imageLabel"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/ImageFrame/ImageFrame">
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/ImageFrame/ImageFrame/title"/>
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/ImageFrame/ImageFrame/image"/>
+                propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/ImageFrame/imageLabel"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/ImageFrame/ImageFrame">
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/ImageFrame/ImageFrame/title"/>
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/ImageFrame/ImageFrame/image"/>
             </genOperations>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/ImageFrame/updateImage">
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/ImageFrame/updateImage/image"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/ImageFrame/updateImage">
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/ImageFrame/updateImage/image"/>
             </genOperations>
           </genClasses>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/ImageFrame_ImageFrame"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/ImageFrame_updateImage"/>
-          <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Configuration">
-            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/gui/Configuration/trajectoriesOn"/>
-            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/gui/Configuration/stoppingPointsOn"/>
-            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/gui/Configuration/thinStrokeOn"/>
-            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/gui/Configuration/randomColorsOn"/>
-            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/gui/Configuration/arrowsOn"/>
-            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/gui/Configuration/gridOn"/>
-            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/gui/Configuration/speedOn"/>
-            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/gui/Configuration/demoOn"/>
-            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/gui/Configuration/delayOn"/>
-            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/gui/Configuration/meanTrajectoryOn"/>
-            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/gui/Configuration/dissimilarTrajectoryOn"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/ImageFrame_ImageFrame"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/ImageFrame_updateImage"/>
+          <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration">
+            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/trajectoriesOn"/>
+            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/stoppingPointsOn"/>
+            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/thinStrokeOn"/>
+            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/randomColorsOn"/>
+            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/arrowsOn"/>
+            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/gridOn"/>
+            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/speedOn"/>
+            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/demoOn"/>
+            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/delayOn"/>
+            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/meanTrajectoryOn"/>
+            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/dissimilarTrajectoryOn"/>
             <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-                propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/gesto/gui/Configuration/selectedTypes"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Configuration/isTypeSelected">
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/Configuration/isTypeSelected/type"/>
+                propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/selectedTypes"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/isTypeSelected">
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/isTypeSelected/type"/>
             </genOperations>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Configuration/toggleSelected">
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/Configuration/toggleSelected/type"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/toggleSelected">
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/toggleSelected/type"/>
             </genOperations>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Configuration/isTrajectoriesSelected"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Configuration/toggleTrajectories"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Configuration/isStoppingPointsSelected"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Configuration/toggleStoppingPoints"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Configuration/isThinStrokeSelected"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Configuration/toggleThinStroke"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Configuration/isRandomColorsSelected"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Configuration/toggleRandomColors"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Configuration/isArrowsSelected"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Configuration/toggleArrows"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Configuration/isGridSelected"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Configuration/toggleGrid"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Configuration/isSpeedSelected"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Configuration/toggleSpeed"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Configuration/isDemoSelected"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Configuration/toggleDemo"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Configuration/isDelaySelected"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Configuration/toggleDelay"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Configuration/isMeanTrajectorySelected"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Configuration/toggleMeanTrajectory"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Configuration/isDissimilarTrajectorySelected"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Configuration/toggleDissimilarTrajectory"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/isTrajectoriesSelected"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/toggleTrajectories"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/isStoppingPointsSelected"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/toggleStoppingPoints"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/isThinStrokeSelected"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/toggleThinStroke"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/isRandomColorsSelected"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/toggleRandomColors"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/isArrowsSelected"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/toggleArrows"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/isGridSelected"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/toggleGrid"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/isSpeedSelected"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/toggleSpeed"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/isDemoSelected"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/toggleDemo"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/isDelaySelected"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/toggleDelay"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/isMeanTrajectorySelected"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/toggleMeanTrajectory"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/isDissimilarTrajectorySelected"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration/toggleDissimilarTrajectory"/>
           </genClasses>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Configuration_isTypeSelected"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Configuration_toggleSelected"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Configuration_isTrajectoriesSelected"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Configuration_toggleTrajectories"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Configuration_isStoppingPointsSelected"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Configuration_toggleStoppingPoints"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Configuration_isThinStrokeSelected"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Configuration_toggleThinStroke"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Configuration_isRandomColorsSelected"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Configuration_toggleRandomColors"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Configuration_isArrowsSelected"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Configuration_toggleArrows"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Configuration_isGridSelected"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Configuration_toggleGrid"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Configuration_isSpeedSelected"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Configuration_toggleSpeed"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Configuration_isDemoSelected"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Configuration_toggleDemo"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Configuration_isDelaySelected"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Configuration_toggleDelay"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Configuration_isMeanTrajectorySelected"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Configuration_toggleMeanTrajectory"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Configuration_isDissimilarTrajectorySelected"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Configuration_toggleDissimilarTrajectory"/>
-          <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Printer">
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration_isTypeSelected"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration_toggleSelected"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration_isTrajectoriesSelected"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration_toggleTrajectories"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration_isStoppingPointsSelected"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration_toggleStoppingPoints"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration_isThinStrokeSelected"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration_toggleThinStroke"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration_isRandomColorsSelected"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration_toggleRandomColors"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration_isArrowsSelected"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration_toggleArrows"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration_isGridSelected"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration_toggleGrid"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration_isSpeedSelected"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration_toggleSpeed"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration_isDemoSelected"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration_toggleDemo"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration_isDelaySelected"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration_toggleDelay"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration_isMeanTrajectorySelected"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration_toggleMeanTrajectory"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration_isDissimilarTrajectorySelected"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Configuration_toggleDissimilarTrajectory"/>
+          <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Printer">
             <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-                propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/gesto/gui/Printer/target"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Printer/setTargetTextArea">
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/Printer/setTargetTextArea/target"/>
+                propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Printer/target"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Printer/setTargetTextArea">
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Printer/setTargetTextArea/target"/>
             </genOperations>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Printer/clean"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Printer/separator"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Printer/printTrajectories"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Printer/printMatrix"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Printer/printAverageDistancesVector"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/Printer/printStatistics"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Printer/clean"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Printer/separator"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Printer/printTrajectories"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Printer/printMatrix"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Printer/printAverageDistancesVector"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Printer/printStatistics"/>
           </genClasses>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Printer_setTargetTextArea"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Printer_clean"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Printer_separator"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Printer_printTrajectories"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Printer_printMatrix"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Printer_printAverageDistancesVector"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/Printer_printStatistics"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar">
-            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/serialVersionUID"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/GestoMenuBar">
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/GestoMenuBar/container"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Printer_setTargetTextArea"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Printer_clean"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Printer_separator"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Printer_printTrajectories"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Printer_printMatrix"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Printer_printAverageDistancesVector"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/Printer_printStatistics"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar">
+            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/serialVersionUID"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/GestoMenuBar">
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/GestoMenuBar/container"/>
             </genOperations>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createConfigurationMenu"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createSubjectsMenu"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createFreshmenItem"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createFinalistsItem"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createTrajectoriesMenu"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createRandomColorsItem"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createThinStrokeItem"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createArrowsItem"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createShowMenu"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createSelectTrajectoriesItem"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createStoppingPointsItem"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createGridItem"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createMeanTrajectoryItem"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createDissimilarTrajectoryItem"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createOptionsMenu"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createSpeedItem"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createDemoItem"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createDelayItem"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createProgramExitItem"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createGraphicsMenu"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createSelectedTrajectoryItem"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createAllTrajectoriesItem"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createHeatMapItem"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createVoronoiItem"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createTextualMenu"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createTrajectoryMatrixItem"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createTrajectoriesItem"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createAverageDistancesVectorItem"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createStatisticsItem"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createCleanItem"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createHelpMenu"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar/createAboutItem"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createConfigurationMenu"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createSubjectsMenu"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createFreshmenItem"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createFinalistsItem"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createTrajectoriesMenu"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createRandomColorsItem"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createThinStrokeItem"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createArrowsItem"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createShowMenu"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createSelectTrajectoriesItem"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createStoppingPointsItem"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createGridItem"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createMeanTrajectoryItem"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createDissimilarTrajectoryItem"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createOptionsMenu"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createSpeedItem"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createDemoItem"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createDelayItem"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createProgramExitItem"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createGraphicsMenu"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createSelectedTrajectoryItem"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createAllTrajectoriesItem"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createHeatMapItem"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createVoronoiItem"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createTextualMenu"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createTrajectoryMatrixItem"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createTrajectoriesItem"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createAverageDistancesVectorItem"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createStatisticsItem"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createCleanItem"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createHelpMenu"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar/createAboutItem"/>
           </genClasses>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_GestoMenuBar"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createConfigurationMenu"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createSubjectsMenu"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createFreshmenItem"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createFinalistsItem"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createTrajectoriesMenu"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createRandomColorsItem"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createThinStrokeItem"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createArrowsItem"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createShowMenu"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createSelectTrajectoriesItem"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createStoppingPointsItem"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createGridItem"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createMeanTrajectoryItem"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createDissimilarTrajectoryItem"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createOptionsMenu"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createSpeedItem"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createDemoItem"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createDelayItem"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createProgramExitItem"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createGraphicsMenu"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createSelectedTrajectoryItem"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createAllTrajectoriesItem"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createHeatMapItem"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createVoronoiItem"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createTextualMenu"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createTrajectoryMatrixItem"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createTrajectoriesItem"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createAverageDistancesVectorItem"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createStatisticsItem"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createCleanItem"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createHelpMenu"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/GestoMenuBar_createAboutItem"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/View">
-            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/gui/View/ARROW_WIDTH"/>
-            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/gui/View/ARROW_HEIGHT"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_GestoMenuBar"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createConfigurationMenu"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createSubjectsMenu"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createFreshmenItem"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createFinalistsItem"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createTrajectoriesMenu"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createRandomColorsItem"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createThinStrokeItem"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createArrowsItem"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createShowMenu"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createSelectTrajectoriesItem"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createStoppingPointsItem"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createGridItem"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createMeanTrajectoryItem"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createDissimilarTrajectoryItem"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createOptionsMenu"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createSpeedItem"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createDemoItem"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createDelayItem"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createProgramExitItem"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createGraphicsMenu"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createSelectedTrajectoryItem"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createAllTrajectoriesItem"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createHeatMapItem"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createVoronoiItem"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createTextualMenu"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createTrajectoryMatrixItem"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createTrajectoriesItem"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createAverageDistancesVectorItem"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createStatisticsItem"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createCleanItem"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createHelpMenu"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/GestoMenuBar_createAboutItem"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View">
+            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/ARROW_WIDTH"/>
+            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/ARROW_HEIGHT"/>
             <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-                propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/gesto/gui/View/MONASTERY_IMAGE_FILE"/>
+                propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/MONASTERY_IMAGE_FILE"/>
             <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-                propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/gesto/gui/View/monasteryImage"/>
+                propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/monasteryImage"/>
             <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-                propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/gesto/gui/View/g2d"/>
+                propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/g2d"/>
             <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-                propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/gesto/gui/View/frame"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/View/getMonasteryImage"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/View/resetMonasteryImage"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/View/causeDelay"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/View/currentStroke">
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/View/currentStroke/width"/>
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/View/currentStroke/dashed"/>
+                propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/frame"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/getMonasteryImage"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/resetMonasteryImage"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/causeDelay"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/currentStroke">
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/currentStroke/width"/>
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/currentStroke/dashed"/>
             </genOperations>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/View/showSelectedTrajectory"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/View/showAllTrajectories"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/View/showHeatMap"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/View/drawVoronoi"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/View/showInterestingRoutes"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/View/showGrid">
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/View/showGrid/g"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/showSelectedTrajectory"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/showAllTrajectories"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/showHeatMap"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/drawVoronoi"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/showInterestingRoutes"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/showGrid">
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/showGrid/g"/>
             </genOperations>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/View/showTrajectory">
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/View/showTrajectory/g"/>
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/View/showTrajectory/t"/>
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/View/showTrajectory/arrows"/>
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/View/showTrajectory/specifiedColor"/>
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/View/showTrajectory/strokeSize"/>
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/View/showTrajectory/dashed"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/showTrajectory">
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/showTrajectory/g"/>
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/showTrajectory/t"/>
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/showTrajectory/arrows"/>
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/showTrajectory/specifiedColor"/>
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/showTrajectory/strokeSize"/>
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/showTrajectory/dashed"/>
             </genOperations>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/View/showTrajectory.1">
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/View/showTrajectory.1/g"/>
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/View/showTrajectory.1/t"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/showTrajectory.1">
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/showTrajectory.1/g"/>
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/showTrajectory.1/t"/>
             </genOperations>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/View/showStoppingPoints">
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/View/showStoppingPoints/g"/>
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/View/showStoppingPoints/t"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/showStoppingPoints">
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/showStoppingPoints/g"/>
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/showStoppingPoints/t"/>
             </genOperations>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/View/drawCircle">
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/View/drawCircle/g"/>
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/View/drawCircle/color"/>
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/View/drawCircle/centerX"/>
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/View/drawCircle/centerY"/>
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/View/drawCircle/radius"/>
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/View/drawCircle/filled"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/drawCircle">
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/drawCircle/g"/>
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/drawCircle/color"/>
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/drawCircle/centerX"/>
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/drawCircle/centerY"/>
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/drawCircle/radius"/>
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/drawCircle/filled"/>
             </genOperations>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/gui/View/drawArrowLine">
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/View/drawArrowLine/g"/>
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/View/drawArrowLine/x1"/>
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/View/drawArrowLine/y1"/>
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/View/drawArrowLine/x2"/>
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/gui/View/drawArrowLine/y2"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/drawArrowLine">
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/drawArrowLine/g"/>
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/drawArrowLine/x1"/>
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/drawArrowLine/y1"/>
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/drawArrowLine/x2"/>
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View/drawArrowLine/y2"/>
             </genOperations>
           </genClasses>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/View_getMonasteryImage"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/View_resetMonasteryImage"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/View_causeDelay"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/View_currentStroke"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/View_showSelectedTrajectory"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/View_showAllTrajectories"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/View_showHeatMap"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/View_drawVoronoi"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/View_showInterestingRoutes"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/View_showGrid"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/View_showTrajectory"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/View_showTrajectory.1"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/View_showStoppingPoints"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/View_drawCircle"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/gui/View_drawArrowLine"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View_getMonasteryImage"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View_resetMonasteryImage"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View_causeDelay"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View_currentStroke"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View_showSelectedTrajectory"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View_showAllTrajectories"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View_showHeatMap"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View_drawVoronoi"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View_showInterestingRoutes"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View_showGrid"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View_showTrajectory"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View_showTrajectory.1"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View_showStoppingPoints"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View_drawCircle"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/gui/View_drawArrowLine"/>
         </nestedGenPackages>
         <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Voronoi" disposableProviderFactory="true"
-            ecorePackage="GESTO.ecore#//gesto/gesto/voronoi">
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/voronoi/VoronoiBasic">
-            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/voronoi/VoronoiBasic/p"/>
+            ecorePackage="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/voronoi">
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/voronoi/VoronoiBasic">
+            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/voronoi/VoronoiBasic/p"/>
             <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-                propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/gesto/voronoi/VoronoiBasic/I"/>
-            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/voronoi/VoronoiBasic/px"/>
-            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/voronoi/VoronoiBasic/py"/>
-            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/voronoi/VoronoiBasic/color"/>
-            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/voronoi/VoronoiBasic/cells"/>
-            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/gesto/voronoi/VoronoiBasic/size"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/voronoi/VoronoiBasic/VoronoiBasic"/>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/voronoi/VoronoiBasic/paint">
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/voronoi/VoronoiBasic/paint/g"/>
+                propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/voronoi/VoronoiBasic/I"/>
+            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/voronoi/VoronoiBasic/px"/>
+            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/voronoi/VoronoiBasic/py"/>
+            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/voronoi/VoronoiBasic/color"/>
+            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/voronoi/VoronoiBasic/cells"/>
+            <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/voronoi/VoronoiBasic/size"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/voronoi/VoronoiBasic/VoronoiBasic"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/voronoi/VoronoiBasic/paint">
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/voronoi/VoronoiBasic/paint/g"/>
             </genOperations>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/voronoi/VoronoiBasic/distance">
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/voronoi/VoronoiBasic/distance/x1"/>
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/voronoi/VoronoiBasic/distance/x2"/>
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/voronoi/VoronoiBasic/distance/y1"/>
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/voronoi/VoronoiBasic/distance/y2"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/voronoi/VoronoiBasic/distance">
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/voronoi/VoronoiBasic/distance/x1"/>
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/voronoi/VoronoiBasic/distance/x2"/>
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/voronoi/VoronoiBasic/distance/y1"/>
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/voronoi/VoronoiBasic/distance/y2"/>
             </genOperations>
-            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/gesto/voronoi/VoronoiBasic/main">
-              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/gesto/voronoi/VoronoiBasic/main/args"/>
+            <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/voronoi/VoronoiBasic/main">
+              <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/voronoi/VoronoiBasic/main/args"/>
             </genOperations>
           </genClasses>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/voronoi/VoronoiBasic_VoronoiBasic"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/voronoi/VoronoiBasic_paint"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/voronoi/VoronoiBasic_distance"/>
-          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/gesto/voronoi/VoronoiBasic_main"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/voronoi/VoronoiBasic_VoronoiBasic"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/voronoi/VoronoiBasic_paint"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/voronoi/VoronoiBasic_distance"/>
+          <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.gesto/voronoi/VoronoiBasic_main"/>
         </nestedGenPackages>
       </nestedGenPackages>
       <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Voronoi2" disposableProviderFactory="true"
-          ecorePackage="GESTO.ecore#//gesto/voronoi2">
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Point">
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Point/x"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Point/y"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Point/Point"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Point/setPoint">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Point/setPoint/x"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Point/setPoint/y"/>
+          ecorePackage="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2">
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Point">
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Point/x"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Point/y"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Point/Point"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Point/setPoint">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Point/setPoint/x"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Point/setPoint/y"/>
           </genOperations>
         </genClasses>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Point_Point"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Point_setPoint"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi">
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Voronoi/borderMinX"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Voronoi/borderMaxX"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Voronoi/borderMinY"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Voronoi/borderMaxY"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Voronoi/siteidx"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Voronoi/xmin"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Voronoi/xmax"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Voronoi/ymin"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Voronoi/ymax"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Voronoi/deltax"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Voronoi/deltay"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Voronoi/nvertices"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Voronoi/nedges"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Voronoi/nsites"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Point_Point"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Point_setPoint"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi">
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/borderMinX"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/borderMaxX"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/borderMinY"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/borderMaxY"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/siteidx"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/xmin"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/xmax"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/ymin"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/ymax"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/deltax"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/deltay"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/nvertices"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/nedges"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/nsites"/>
           <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/voronoi2/Voronoi/sites"/>
+              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/sites"/>
           <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/voronoi2/Voronoi/bottomsite"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Voronoi/sqrt_nsites"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Voronoi/minDistanceBetweenSites"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Voronoi/PQcount"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Voronoi/PQmin"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Voronoi/PQhashsize"/>
+              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/bottomsite"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/sqrt_nsites"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/minDistanceBetweenSites"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/PQcount"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/PQmin"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/PQhashsize"/>
           <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/voronoi2/Voronoi/PQhash"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Voronoi/LE"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Voronoi/RE"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Voronoi/ELhashsize"/>
+              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/PQhash"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/LE"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/RE"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/ELhashsize"/>
           <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/voronoi2/Voronoi/ELhash"/>
+              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/ELhash"/>
           <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/voronoi2/Voronoi/ELleftend"/>
+              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/ELleftend"/>
           <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/voronoi2/Voronoi/ELrightend"/>
+              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/ELrightend"/>
           <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/voronoi2/Voronoi/allEdges"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/Voronoi">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/Voronoi/minDistanceBetweenSites"/>
+              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/allEdges"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/Voronoi">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/Voronoi/minDistanceBetweenSites"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/generateVoronoi">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/generateVoronoi/xValuesIn"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/generateVoronoi/yValuesIn"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/generateVoronoi/minX"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/generateVoronoi/maxX"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/generateVoronoi/minY"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/generateVoronoi/maxY"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/generateVoronoi">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/generateVoronoi/xValuesIn"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/generateVoronoi/yValuesIn"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/generateVoronoi/minX"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/generateVoronoi/maxX"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/generateVoronoi/minY"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/generateVoronoi/maxY"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/sort">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/sort/xValuesIn"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/sort/yValuesIn"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/sort/count"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/sort">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/sort/xValuesIn"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/sort/yValuesIn"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/sort/count"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/qsort">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/qsort/sites"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/qsort">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/qsort/sites"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/sortNode">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/sortNode/xValues"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/sortNode/yValues"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/sortNode/numPoints"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/sortNode">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/sortNode/xValues"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/sortNode/yValues"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/sortNode/numPoints"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/nextone"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/bisect">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/bisect/s1"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/bisect/s2"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/nextone"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/bisect">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/bisect/s1"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/bisect/s2"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/makevertex">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/makevertex/v"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/makevertex">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/makevertex/v"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/PQinitialize"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/PQbucket">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/PQbucket/he"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/PQinitialize"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/PQbucket">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/PQbucket/he"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/PQinsert">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/PQinsert/he"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/PQinsert/v"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/PQinsert/offset"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/PQinsert">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/PQinsert/he"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/PQinsert/v"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/PQinsert/offset"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/PQdelete">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/PQdelete/he"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/PQdelete">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/PQdelete/he"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/PQempty"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/PQ_min"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/PQextractmin"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/HEcreate">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/HEcreate/e"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/HEcreate/pm"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/PQempty"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/PQ_min"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/PQextractmin"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/HEcreate">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/HEcreate/e"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/HEcreate/pm"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/ELinitialize"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/ELright">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/ELright/he"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/ELinitialize"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/ELright">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/ELright/he"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/ELleft">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/ELleft/he"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/ELleft">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/ELleft/he"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/leftreg">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/leftreg/he"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/leftreg">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/leftreg/he"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/ELinsert">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/ELinsert/lb"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/ELinsert/newHe"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/ELinsert">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/ELinsert/lb"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/ELinsert/newHe"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/ELdelete">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/ELdelete/he"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/ELdelete">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/ELdelete/he"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/ELgethash">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/ELgethash/b"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/ELgethash">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/ELgethash/b"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/ELleftbnd">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/ELleftbnd/p"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/ELleftbnd">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/ELleftbnd/p"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/pushGraphEdge">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/pushGraphEdge/leftSite"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/pushGraphEdge/rightSite"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/pushGraphEdge/x1"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/pushGraphEdge/y1"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/pushGraphEdge/x2"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/pushGraphEdge/y2"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/pushGraphEdge">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/pushGraphEdge/leftSite"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/pushGraphEdge/rightSite"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/pushGraphEdge/x1"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/pushGraphEdge/y1"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/pushGraphEdge/x2"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/pushGraphEdge/y2"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/clip_line">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/clip_line/e"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/clip_line">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/clip_line/e"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/endpoint">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/endpoint/e"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/endpoint/lr"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/endpoint/s"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/endpoint">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/endpoint/e"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/endpoint/lr"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/endpoint/s"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/right_of">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/right_of/el"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/right_of/p"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/right_of">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/right_of/el"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/right_of/p"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/rightreg">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/rightreg/he"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/rightreg">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/rightreg/he"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/dist">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/dist/s"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/dist/t"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/dist">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/dist/s"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/dist/t"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/intersect">
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/intersect/el1"/>
-            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//gesto/voronoi2/Voronoi/intersect/el2"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/intersect">
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/intersect/el1"/>
+            <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/intersect/el2"/>
           </genOperations>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Voronoi/voronoi_bd"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi/voronoi_bd"/>
         </genClasses>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Site">
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Site">
           <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/voronoi2/Site/coord"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Site/sitenbr"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Site/Site"/>
+              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Site/coord"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Site/sitenbr"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Site/Site"/>
         </genClasses>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Site_Site"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Halfedge">
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Site_Site"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Halfedge">
           <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/voronoi2/Halfedge/ELleft"/>
+              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Halfedge/ELleft"/>
           <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/voronoi2/Halfedge/ELright"/>
+              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Halfedge/ELright"/>
           <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/voronoi2/Halfedge/ELedge"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Halfedge/deleted"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Halfedge/ELpm"/>
+              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Halfedge/ELedge"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Halfedge/deleted"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Halfedge/ELpm"/>
           <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/voronoi2/Halfedge/vertex"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Halfedge/ystar"/>
+              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Halfedge/vertex"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Halfedge/ystar"/>
           <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/voronoi2/Halfedge/PQnext"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Halfedge/Halfedge"/>
+              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Halfedge/PQnext"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Halfedge/Halfedge"/>
         </genClasses>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Edge">
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Edge/a"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Edge/b"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Edge/c"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Edge">
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Edge/a"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Edge/b"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Edge/c"/>
           <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/voronoi2/Edge/ep"/>
+              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Edge/ep"/>
           <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//gesto/voronoi2/Edge/reg"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/Edge/edgenbr"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/Edge/Edge"/>
+              propertySortChoices="true" ecoreFeature="ecore:EReference GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Edge/reg"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Edge/edgenbr"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Edge/Edge"/>
         </genClasses>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Edge_Edge"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Halfedge_Halfedge"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_Voronoi"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_generateVoronoi"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_sort"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_qsort"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_sortNode"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_nextone"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_bisect"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_makevertex"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_PQinitialize"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_PQbucket"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_PQinsert"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_PQdelete"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_PQempty"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_PQ_min"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_PQextractmin"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_HEcreate"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_ELinitialize"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_ELright"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_ELleft"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_leftreg"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_ELinsert"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_ELdelete"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_ELgethash"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_ELleftbnd"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_pushGraphEdge"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_clip_line"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_endpoint"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_right_of"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_rightreg"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_dist"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_intersect"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/Voronoi_voronoi_bd"/>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/GraphEdge">
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/GraphEdge/x1"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/GraphEdge/y1"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/GraphEdge/x2"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/GraphEdge/y2"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/GraphEdge/site1"/>
-          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//gesto/voronoi2/GraphEdge/site2"/>
-          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//gesto/voronoi2/GraphEdge/toString"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Edge_Edge"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Halfedge_Halfedge"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_Voronoi"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_generateVoronoi"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_sort"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_qsort"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_sortNode"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_nextone"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_bisect"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_makevertex"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_PQinitialize"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_PQbucket"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_PQinsert"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_PQdelete"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_PQempty"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_PQ_min"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_PQextractmin"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_HEcreate"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_ELinitialize"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_ELright"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_ELleft"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_leftreg"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_ELinsert"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_ELdelete"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_ELgethash"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_ELleftbnd"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_pushGraphEdge"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_clip_line"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_endpoint"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_right_of"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_rightreg"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_dist"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_intersect"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/Voronoi_voronoi_bd"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/GraphEdge">
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/GraphEdge/x1"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/GraphEdge/y1"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/GraphEdge/x2"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/GraphEdge/y2"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/GraphEdge/site1"/>
+          <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/GraphEdge/site2"/>
+          <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/GraphEdge/toString"/>
         </genClasses>
-        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//gesto/voronoi2/GraphEdge_toString"/>
+        <genClasses xsi:type="genmodel:GenClass" ecoreClass="GESTO.ecore#//org.quasar.gesto/org.quasar.voronoi2/GraphEdge_toString"/>
       </nestedGenPackages>
     </nestedGenPackages>
     <nestedGenPackages xsi:type="genmodel:GenPackage" prefix="Java" disposableProviderFactory="true"

@@ -1,5 +1,3 @@
-package voronoi2;
-
 /*
   Copyright 2011 James Humphreys. All rights reserved.
 
@@ -28,20 +26,16 @@ authors and should not be interpreted as representing official policies, either 
 or implied, of James Humphreys.
  */
 
-/**
- *
- * @author James Humphreys
- */
-class Edge
-{
-    public double a = 0, b = 0, c = 0;
-    Site[] ep;  // JH: End points?
-    Site[] reg; // JH: Sites this edge bisects?
-    int edgenbr;
+package org.quasar.voronoi2;
 
-    Edge()
+// used both for sites and for vertices
+public class Site
+{
+    Point coord;
+    int sitenbr;
+
+    public Site()
     {
-        ep = new Site[2];
-        reg = new Site[2];
+        coord = new Point();
     }
 }
