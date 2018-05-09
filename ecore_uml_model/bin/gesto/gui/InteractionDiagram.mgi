@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <CommunicationClass name="gesto.gui.Configuration" x="393" y="206"/>
+    <CommunicationClass name="gesto.gui.ImageFrame" x="1069" y="456"/>
+    <CommunicationClass name="gesto.gui.GestoGUI" x="358" y="488"/>
+    <CommunicationClass name="gesto.gui.View" x="736" y="205">
+        <Association destinationClassName="gesto.gui.ImageFrame"
+            endpointName="frame" kind="Simple"/>
+        <Communication destinationClassName="gesto.gui.Configuration"/>
+        <Communication destinationClassName="gesto.gui.ImageFrame"/>
+    </CommunicationClass>
+    <CommunicationClass name="gesto.gui.GestoMenuBar" x="72" y="207">
+        <Communication destinationClassName="gesto.gui.Configuration"/>
+        <Communication destinationClassName="gesto.gui.Printer"/>
+    </CommunicationClass>
+    <CommunicationClass name="gesto.gui.Printer" x="413" y="34">
+        <Communication destinationClassName="gesto.gui.Configuration"/>
+    </CommunicationClass>
+    <CommunicationClass name="gesto.Main" x="156" y="500"/>
+</ClassDiagram>
